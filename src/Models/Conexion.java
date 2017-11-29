@@ -5,10 +5,22 @@
  */
 package Models;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 /**
  *
  * @author user
  */
 public class Conexion {
-    
+        Connection ConexBD = null;
+    public Connection getCempBD (){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            ConexBD = DriverManager.getConnection("jdbc:mysql://localhost/Sena_Adsi","root","");
+        }catch (Exception e){
+            System.out.println("Error de conexion"+e.getMessage());
+        }
+        return ConexBD;
+    }
 }
