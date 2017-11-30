@@ -19,6 +19,7 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
      */
     public FormRegContratoAprendiz() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**
@@ -74,6 +75,10 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         DateIngreso = new datechooser.beans.DateChooserCombo();
         DateRetiro = new datechooser.beans.DateChooserCombo();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -201,7 +206,7 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jPanel1.add(txtNumeroCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 150, 30));
 
         jButton1.setText("BUSCAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 480, 90, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, 90, -1));
 
         jButton2.setText("MODIFICAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -209,13 +214,13 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, -1, -1));
 
         jButton3.setText("ELIMINAR");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 480, 90, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 530, 90, -1));
 
         jButton4.setText("GUARDAR");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 90, -1));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 90, -1));
 
         DateIngreso.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
@@ -303,7 +308,19 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
             true)));
 jPanel1.add(DateRetiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, -1, 30));
 
-getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 530));
+jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
+jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 50, 70));
+
+jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit.png"))); // NOI18N
+jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 60, 70));
+
+jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
+jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 450, 50, 70));
+
+jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
+jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 30, 70));
+
+getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 570));
 
 pack();
 }// </editor-fold>//GEN-END:initComponents
@@ -452,6 +469,10 @@ pack();
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
