@@ -7,8 +7,8 @@ package Models;
 
 /**
  *
- * @author user
+ * @author Andres
  */
-public class Conexion {
+public class RegistroPasantia {
     
 }
