@@ -17,7 +17,7 @@ public class Conexion {
     public Connection getCempBD (){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            ConexBD = DriverManager.getConnection("jdbc:mysql://localhost/Sena_ADSI","root","");
+            ConexBD = DriverManager.getConnection("jdbc:mysql://localhost/sena_adsi","root","");
         }catch (Exception e){
             System.out.println("Error de conexion"+e.getMessage());
         }

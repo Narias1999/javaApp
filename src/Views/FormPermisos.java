@@ -16,6 +16,7 @@ public class FormPermisos extends javax.swing.JFrame {
      */
     public FormPermisos() {
         initComponents();
+        setLocationRelativeTo(null);
         setTitle("INTERFACE-PERMISOS");
     }
 
@@ -52,35 +53,38 @@ public class FormPermisos extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtdetpermi = new javax.swing.JTextArea();
-        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
-        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
+        dtfecdesde = new datechooser.beans.DateChooserCombo();
+        dtfechasta = new datechooser.beans.DateChooserCombo();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("                      PERMISOS");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 350, 20));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("DETALLE DEL PERMISO:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+        jLabel2.setText("DETALLE DEL PERMISO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("# DE DOCUMENTO:");
+        jLabel3.setText("# DE DOCUMENTO");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("CELULAR DEL EMPLEADO:");
+        jLabel5.setText("CELULAR DEL EMPLEADO");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("HORA/FECHA HASTA:");
+        jLabel6.setText("HORA/FECHA HASTA");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, -1, -1));
 
         txtnomem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -90,23 +94,23 @@ public class FormPermisos extends javax.swing.JFrame {
         jPanel1.add(txtcelem, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 170, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("TIPO DE DOCUMENTO:");
+        jLabel7.setText("TIPO DE DOCUMENTO");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setText("NOMBRE DE EMPLEADO:");
+        jLabel8.setText("NOMBRE DE EMPLEADO");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("DIRECCION EMPLEADO:");
+        jLabel9.setText("DIRECCION EMPLEADO");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel10.setText("CORREO EMPLEADO:");
+        jLabel10.setText("CORREO EMPLEADO");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel11.setText("HORA/FECHA DESDE:");
+        jLabel11.setText("HORA/FECHA DESDE");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
         txttipdoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -136,16 +140,16 @@ public class FormPermisos extends javax.swing.JFrame {
         btmodificar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btmodificar.setText("MODIFICAR");
         jPanel1.add(btmodificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, -1, -1));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 670, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 690, 10));
 
         txtdetpermi.setColumns(20);
         txtdetpermi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtdetpermi.setRows(5);
         jScrollPane1.setViewportView(txtdetpermi);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 510, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 520, 90));
 
-        dateChooserCombo1.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+        dtfecdesde.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
                 new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
                     new java.awt.Color(0, 0, 0),
@@ -186,9 +190,9 @@ public class FormPermisos extends javax.swing.JFrame {
                 (datechooser.view.BackRenderer)null,
                 false,
                 true)));
-    jPanel1.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
+    jPanel1.add(dtfecdesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
 
-    dateChooserCombo2.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+    dtfechasta.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
                 new java.awt.Color(0, 0, 0),
@@ -229,7 +233,19 @@ public class FormPermisos extends javax.swing.JFrame {
             (datechooser.view.BackRenderer)null,
             false,
             true)));
-jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 170, -1));
+jPanel1.add(dtfechasta, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 170, -1));
+
+jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
+jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 60, 50));
+
+jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
+jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 50, 40));
+
+jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit.png"))); // NOI18N
+jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 70, 40));
+
+jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
+jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 50, 40));
 
 getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
 
@@ -276,13 +292,17 @@ pack();
     private javax.swing.JButton bteliminar;
     private javax.swing.JButton btguardar;
     private javax.swing.JButton btmodificar;
-    private datechooser.beans.DateChooserCombo dateChooserCombo1;
-    private datechooser.beans.DateChooserCombo dateChooserCombo2;
+    private datechooser.beans.DateChooserCombo dtfecdesde;
+    private datechooser.beans.DateChooserCombo dtfechasta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
