@@ -153,52 +153,52 @@ public class FormRegistroEmpleados extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 290, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 290, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 190, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 190, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE", "CEDULA", "TARJETA DE IDENTIDAD", "CEDULA EXTRANGERA" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 220, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 280, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 190, -1));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 190, -1));
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE", "SOLTERO/A", "COMPROMETIDO/A", "CASADO/A", "DIVORCIADO/A", "VIUDO/A", " ", " " }));
-        jPanel1.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 780, 230, -1));
+        jPanel1.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 800, 190, -1));
 
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 620, 230, -1));
+        jPanel1.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 620, 190, -1));
 
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 560, 230, 30));
+        jPanel1.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 190, 30));
 
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE", "O +", "A  -", "A +", "B  -", "B  -", "AB +", "AB -" }));
-        jPanel1.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 680, 230, -1));
+        jPanel1.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 680, 190, -1));
 
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jPanel1.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 230, -1));
+        jPanel1.add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 190, -1));
 
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jPanel1.add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, 230, -1));
+        jPanel1.add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, 190, -1));
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 900, 290, -1));
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 910, 290, -1));
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 950, 290, -1));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 960, 290, -1));
 
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 840, 290, -1));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 730, 230, -1));
+        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 860, 270, -1));
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 740, 190, -1));
 
         jButton1.setText("GUARDAR");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 1030, -1, -1));
