@@ -67,57 +67,83 @@ public class FormVacaciones extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 370, 20));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("OBSEVACIONES:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("# DE DOCUMENTO:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("CELULAR DEL EMPLEADO:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("HORA/FECHA HASTA:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, -1, -1));
-        jPanel1.add(txtnombremp, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 170, -1));
-        jPanel1.add(txtcelemple, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 170, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, -1, -1));
 
+        txtnombremp.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtnombremp, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 170, -1));
+
+        txtcelemple.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtcelemple, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 170, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("TIPO DE DOCUMENTO:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("NOMBRE DE EMPLEADO:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("DIRECCION EMPLEADO:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("CORREO EMPLEADO:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("HORA/FECHA DESDE:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-        jPanel1.add(txttpd, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 170, -1));
-        jPanel1.add(txtnumdocu, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 170, -1));
-        jPanel1.add(txtdirecempl, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 170, -1));
-        jPanel1.add(txtcorreoem, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 170, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
+        txttpd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txttpd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 170, -1));
+
+        txtnumdocu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtnumdocu, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 170, -1));
+
+        txtdirecempl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtdirecempl, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 170, -1));
+
+        txtcorreoem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtcorreoem, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 170, -1));
+
+        btelim.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btelim.setText("ELIMINAR");
         jPanel1.add(btelim, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, 110, -1));
 
+        btguar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btguar.setText("GUARDAR");
         jPanel1.add(btguar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, 110, -1));
 
+        btbusc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btbusc.setText("BUSCAR");
         jPanel1.add(btbusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 100, -1));
 
+        btmod.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btmod.setText("MODIFICAR");
         jPanel1.add(btmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 110, -1));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 670, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 680, 10));
 
         txtobs.setColumns(20);
+        txtobs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtobs.setRows(5);
         jScrollPane1.setViewportView(txtobs);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 550, 80));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 550, 80));
 
         dateChooserCombo1.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
@@ -160,7 +186,7 @@ public class FormVacaciones extends javax.swing.JFrame {
                 (datechooser.view.BackRenderer)null,
                 false,
                 true)));
-    jPanel1.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 170, -1));
+    jPanel1.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
 
     dateChooserCombo2.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
@@ -203,7 +229,7 @@ public class FormVacaciones extends javax.swing.JFrame {
             (datechooser.view.BackRenderer)null,
             false,
             true)));
-jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 170, -1));
+jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 170, -1));
 
 getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 500));
 
