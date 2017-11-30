@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : java
+Source Server         : Conexion
 Source Server Version : 50505
 Source Host           : localhost:3306
-Source Database       : java
+Source Database       : sena_adsi
 
 Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-11-30 09:54:11
+Date: 2017-11-30 11:14:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -124,6 +124,7 @@ CREATE TABLE `contrato_diferente` (
   `arl` int(15) DEFAULT NULL,
   `vto_soat` varchar(15) DEFAULT NULL,
   `vto_tecnomecanica` varchar(15) DEFAULT NULL,
+  `tipo` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `num_doc` (`num_doc`),
   CONSTRAINT `contrato_diferente_ibfk_1` FOREIGN KEY (`num_doc`) REFERENCES `empleados_contratista` (`num_doc`)
@@ -181,7 +182,6 @@ CREATE TABLE `datos_contrato` (
 DROP TABLE IF EXISTS `det_permiso_vacaciones`;
 CREATE TABLE `det_permiso_vacaciones` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `num_doc` varchar(15) DEFAULT NULL,
   `cod_permiso` int(10) DEFAULT NULL,
   `hor_fch_desde` varchar(20) DEFAULT NULL,
   `desc` varchar(255) DEFAULT NULL,
@@ -189,9 +189,7 @@ CREATE TABLE `det_permiso_vacaciones` (
   `obs` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `cod_permiso` (`cod_permiso`),
-  KEY `num_doc` (`num_doc`),
-  CONSTRAINT `det_permiso_vacaciones_ibfk_1` FOREIGN KEY (`cod_permiso`) REFERENCES `permisos_vaciones` (`cod`),
-  CONSTRAINT `det_permiso_vacaciones_ibfk_2` FOREIGN KEY (`num_doc`) REFERENCES `empleados_contratista` (`num_doc`)
+  CONSTRAINT `cod` FOREIGN KEY (`cod_permiso`) REFERENCES `permisos_vaciones` (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -303,7 +301,9 @@ CREATE TABLE `permisos_vaciones` (
   `num_doc` varchar(15) DEFAULT NULL,
   `tipo` varchar(1) DEFAULT NULL COMMENT '1 vacaciones 2 permisos',
   PRIMARY KEY (`cod`),
-  KEY `cod` (`cod`)
+  KEY `cod` (`cod`),
+  KEY `doc_detalle` (`num_doc`),
+  CONSTRAINT `doc_detalle` FOREIGN KEY (`num_doc`) REFERENCES `empleados_contratista` (`num_doc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
