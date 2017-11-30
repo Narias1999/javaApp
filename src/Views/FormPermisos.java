@@ -56,6 +56,7 @@ public class FormPermisos extends javax.swing.JFrame {
         dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -205,7 +206,7 @@ public class FormPermisos extends javax.swing.JFrame {
             true)));
 jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 170, -1));
 
-getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 470));
+getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
 
 pack();
 }// </editor-fold>//GEN-END:initComponents
