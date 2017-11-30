@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaz;
+package Views;
 
 /**
  *
@@ -16,6 +16,7 @@ public class Frm_RegistroContrato extends javax.swing.JFrame {
      */
     public Frm_RegistroContrato() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**
@@ -27,11 +28,10 @@ public class Frm_RegistroContrato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
         jPanel1 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -41,141 +41,229 @@ public class Frm_RegistroContrato extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField9 = new javax.swing.JTextField();
+        cbxTipodeContrato = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
+        txtDireccionContratista = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField21 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        txtCorreoContratista = new javax.swing.JTextField();
+        txtValorContrato = new javax.swing.JTextField();
+        txtAporteARL = new javax.swing.JTextField();
+        txtARL = new javax.swing.JTextField();
+        txtNoContrato = new javax.swing.JTextField();
+        txtTipoDocumento = new javax.swing.JTextField();
+        txtNombreContratista = new javax.swing.JTextField();
+        txtCelularContratista = new javax.swing.JTextField();
+        txtNoDocumento = new javax.swing.JTextField();
+        txtServicioObjContrato = new javax.swing.JTextField();
+        txtAporteSeguridadSocial = new javax.swing.JTextField();
+        txtAportePension = new javax.swing.JTextField();
+        DateInicio = new datechooser.beans.DateChooserCombo();
+        DateRetiro = new datechooser.beans.DateChooserCombo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 750, 10));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("DATOS DEL CONTRATO DE TRACTO SUCESIVO");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 430, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 430, 40));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("APORTE PENSION");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, 20));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 260, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("% ARL");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, -1, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("FECHA DE INICIO");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, 30));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("NOMBRE DEL CONTRATISTA");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, 20));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, 30));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("TIPO DE DOCUMENTO");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, 20));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("CELULAR DEL CONTRATISTA");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, 20));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, 30));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("SERVICIO OBJETO DEL CONTRATO");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 20));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, 30));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("APORTE SEGURIDAD SOCIAL");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, 20));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, 30));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("No DE CONTRATO");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, 20));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, 30));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("TIPO DE CONTRATO");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, -1, 20));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, -1, 30));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, 140, -1));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 460, 180, -1));
+        cbxTipodeContrato.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
+        jPanel1.add(cbxTipodeContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, 150, 30));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("# DE DOCUMENTO");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, 20));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 180, -1));
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 180, -1));
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 180, -1));
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 190, -1));
-        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 180, -1));
-        jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 180, -1));
-        jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 180, -1));
-        jPanel1.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 180, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, 30));
+        jPanel1.add(txtDireccionContratista, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 200, 150, 30));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("DIRECCION CONTRATISTA");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, -1, 20));
-        jPanel1.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 180, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, -1, 30));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("CORREO CONTRATISTA");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, 20));
-        jPanel1.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 180, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, -1, 30));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setText("FECHA DE TERMINACION");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, 20));
-        jPanel1.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, 180, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, -1, 30));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("VALOR CONTRATO");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, -1, 20));
-        jPanel1.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 360, 180, -1));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, -1, 30));
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setText("APORTE ARL");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, -1, 20));
-        jPanel1.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, 180, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, -1, 30));
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("ELIMINAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 550, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 543, 90, 30));
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton2.setText("GUARDAR");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 543, 100, 30));
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton3.setText("BUSCAR");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 543, 90, 30));
 
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton4.setText("MODIFICAR");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, -1, -1));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(467, 543, 100, 30));
+        jPanel1.add(txtCorreoContratista, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 150, 30));
+        jPanel1.add(txtValorContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 150, 30));
+        jPanel1.add(txtAporteARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 400, 150, 30));
+        jPanel1.add(txtARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, 150, 30));
+        jPanel1.add(txtNoContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 150, 30));
+        jPanel1.add(txtTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 150, 30));
+        jPanel1.add(txtNombreContratista, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 150, 30));
+        jPanel1.add(txtCelularContratista, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 150, 30));
+        jPanel1.add(txtNoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, 150, 30));
+        jPanel1.add(txtServicioObjContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 150, 30));
+        jPanel1.add(txtAporteSeguridadSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 150, 30));
+        jPanel1.add(txtAportePension, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 150, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 600));
+        DateInicio.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+            new datechooser.view.appearance.ViewAppearance("custom",
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    true,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 255),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(128, 128, 128),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.LabelPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.LabelPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(255, 0, 0),
+                    false,
+                    false,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                (datechooser.view.BackRenderer)null,
+                false,
+                true)));
+    jPanel1.add(DateInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 150, 30));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+    DateRetiro.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+        new datechooser.view.appearance.ViewAppearance("custom",
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(0, 0, 255),
+                true,
+                true,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 255),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(128, 128, 128),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.LabelPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.LabelPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(255, 0, 0),
+                false,
+                false,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            (datechooser.view.BackRenderer)null,
+            false,
+            true)));
+jPanel1.add(DateRetiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, 150, 30));
+
+getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 860, 600));
+
+pack();
+}// </editor-fold>//GEN-END:initComponents
 
     /**
      * @param args the command line arguments
@@ -211,13 +299,92 @@ public class Frm_RegistroContrato extends javax.swing.JFrame {
             }
         });
     }
+     void setGuardar() {
+//        Ctrl objCtrl = new Ctrl();
+//        int nodecontacto = Integer.parseInt(txtNoContrato.getText());
+//        String tipo_documento = txtTipoDocumento.getSelectedItem().toString();
+//        String nombre_contratista=txtNombreContratista.getText();
+//        String celular_contratista=txtCelularContratista.getText();
+//        int año = dateInicio.getSelectedDate().get(Calendar.YEAR);
+//        int mes = dateInicio.getSelectedDate().get(Calendar.MONTH) + 1;
+//        int dia = dateInicio.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+//        String fecha = año + "-" + mes + "-" + dia;
 
+//        String  servicio_objet= txtServicioObjContrato.getText();
+//        String  aporte_seguridad= txtAporteSeguridadSocial.getText();        
+//        String  aporte_pencion=  txtAportePension.getText();
+//        String tipo_contrato= cbxTipodeContrato.getSelectedItem().toString();;
+//        String  numero_documento= txtNoDocumento.getText();
+//        String periodo_pago = cbxPeriodoPago.getSelectedItem().toString();
+//        int direccion_contratista = txtDireccionContratista.getText();
+//        String correo_contratista = txtCorreoContratista.getText();
+//        int año2 = dateRetiro.getSelectedDate().get(Calendar.YEAR);
+//        int mes2 = dateRetiro.getSelectedDate().get(Calendar.MONTH) + 1;
+//        int dia2 = dateRetiro.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+//        String fecha2 = año2 + "-" + mes2 + "-" + dia2;
+//        int valor_contratot = Integer.parseInt(txtValorContrato.getText());
+//        int AporteARL = Integer.parseInt(txtAporteARL.getText());
+//        String arl= txtARL.getText();
+//        Ctrl.guardar();
+
+    }
+    
+    void actualizar() {
+             // Ctrl objCtrl = new Ctrl();
+        int nodecontacto = Integer.parseInt(txtNoContrato.getText());
+        String tipo_documento = txtTipoDocumento.getText();
+        String nombre_contratista=txtNombreContratista.getText();
+        String celular_contratista=txtCelularContratista.getText();
+//        int año = dateInicio.getSelectedDate().get(Calendar.YEAR);
+//        int mes = dateInicio.getSelectedDate().get(Calendar.MONTH) + 1;
+//        int dia = dateInicio.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+//        String fecha = año + "-" + mes + "-" + dia;
+         String  servicio_objet= txtServicioObjContrato.getText();
+         String  aporte_seguridad= txtAporteSeguridadSocial.getText();        
+         String  aporte_pencion=  txtAportePension.getText();         
+         String  numero_documento= txtNoDocumento.getText();
+         String direccion_contrat = txtDireccionContratista.getText();
+         String correo_contratista = txtCorreoContratista.getText();
+//        int año2 = dateRetiro.getSelectedDate().get(Calendar.YEAR);
+//        int mes2 = dateRetiro.getSelectedDate().get(Calendar.MONTH) + 1;
+//        int dia2 = dateRetiro.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+//        String fecha2 = año2 + "-" + mes2 + "-" + dia2;
+          int valor_contratot = Integer.parseInt(txtValorContrato.getText());
+          int AporteARL = Integer.parseInt(txtAporteARL.getText());
+          String arl= txtARL.getText();
+//        Ctrl.guardar();
+    }
+        
+    
+    
+        public void cargarDatos() {
+//        Ctrl objectrl = new Ctrl();
+//        String no_contacto = txtNoContrato.getText();
+//        ResultSet datos = objectrl.cargarDatos(no_contacto);
+//
+//        try {
+//            while () {
+//               
+//            }
+//        } catch (Exception e) {
+//        }
+            
+        
+    }    
+       void elimina(){
+//         Ctrl objctrl = new Ctrl();
+        String no_contacto =  txtNoContrato.getText();
+//        objctrl.elimnar(no_contacto);
+      } 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private datechooser.beans.DateChooserCombo DateInicio;
+    private datechooser.beans.DateChooserCombo DateRetiro;
+    private javax.swing.JComboBox<String> cbxTipodeContrato;
+    private datechooser.beans.DateChooserCombo dateChooserCombo1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -236,21 +403,18 @@ public class Frm_RegistroContrato extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField txtARL;
+    private javax.swing.JTextField txtAporteARL;
+    private javax.swing.JTextField txtAportePension;
+    private javax.swing.JTextField txtAporteSeguridadSocial;
+    private javax.swing.JTextField txtCelularContratista;
+    private javax.swing.JTextField txtCorreoContratista;
+    private javax.swing.JTextField txtDireccionContratista;
+    private javax.swing.JTextField txtNoContrato;
+    private javax.swing.JTextField txtNoDocumento;
+    private javax.swing.JTextField txtNombreContratista;
+    private javax.swing.JTextField txtServicioObjContrato;
+    private javax.swing.JTextField txtTipoDocumento;
+    private javax.swing.JTextField txtValorContrato;
     // End of variables declaration//GEN-END:variables
 }

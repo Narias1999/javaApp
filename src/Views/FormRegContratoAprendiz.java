@@ -72,6 +72,8 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        DateIngreso = new datechooser.beans.DateChooserCombo();
+        DateRetiro = new datechooser.beans.DateChooserCombo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,6 +95,7 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
         jPanel1.add(txtNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 150, 30));
 
+        cbxARL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 150, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -124,16 +127,20 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, -1));
         jPanel1.add(txtSalarioBasico, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 150, 30));
 
+        cbxFondoSalud.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxFondoSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 150, 30));
         jPanel1.add(txtAtep, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 150, 30));
 
+        cbxZonaLaboral.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxZonaLaboral, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 150, 30));
 
+        cbxTipoCuenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxTipoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 150, 30));
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 150, 30));
 
+        cbxPeriodoPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxPeriodoPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 150, 30));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -172,15 +179,24 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jLabel20.setText("FONDO DE SALUD");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 140, 20));
 
+        cbxTipoducumento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
+        cbxTipoducumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxTipoducumentoActionPerformed(evt);
+            }
+        });
         jPanel1.add(cbxTipoducumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 150, 30));
         jPanel1.add(txtNoContrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 150, 30));
         jPanel1.add(txtInstituciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 150, 30));
 
+        cbxTipoContacto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxTipoContacto, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 150, 30));
 
+        cbxCiudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 150, 30));
         jPanel1.add(txtNit, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 150, 30));
 
+        cbxBancoCuenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxBancoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 150, 30));
         jPanel1.add(txtNumeroCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 150, 30));
 
@@ -201,14 +217,104 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
         jButton4.setText("GUARDAR");
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 90, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 530));
+        DateIngreso.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+            new datechooser.view.appearance.ViewAppearance("custom",
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    true,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 255),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(128, 128, 128),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.LabelPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(0, 0, 255),
+                    false,
+                    true,
+                    new datechooser.view.appearance.swing.LabelPainter()),
+                new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                    new java.awt.Color(0, 0, 0),
+                    new java.awt.Color(255, 0, 0),
+                    false,
+                    false,
+                    new datechooser.view.appearance.swing.ButtonPainter()),
+                (datechooser.view.BackRenderer)null,
+                false,
+                true)));
+    jPanel1.add(DateIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 150, 30));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+    DateRetiro.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+        new datechooser.view.appearance.ViewAppearance("custom",
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(0, 0, 255),
+                true,
+                true,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 255),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(128, 128, 128),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.LabelPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(0, 0, 255),
+                false,
+                true,
+                new datechooser.view.appearance.swing.LabelPainter()),
+            new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
+                new java.awt.Color(0, 0, 0),
+                new java.awt.Color(255, 0, 0),
+                false,
+                false,
+                new datechooser.view.appearance.swing.ButtonPainter()),
+            (datechooser.view.BackRenderer)null,
+            false,
+            true)));
+jPanel1.add(DateRetiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, -1, 30));
+
+getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 530));
+
+pack();
+}// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cbxTipoducumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTipoducumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxTipoducumentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,28 +354,28 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
      void setGuardar() {
 //        Ctrl objCtrl = new Ctrl();
 //        int nodecontacto = Integer.parseInt(txtNoContrato.getText());
-//        String tipo_documento = cbxTipoducumento.getText();
+//        String tipo_documento = cbxTipoducumento.getSelectedItem().toString();
 //        int año = dateFeIngreso.getSelectedDate().get(Calendar.YEAR);
 //        int mes = dateFeIngreso.getSelectedDate().get(Calendar.MONTH) + 1;
 //        int dia = dateFeIngreso.getSelectedDate().get(Calendar.DAY_OF_MONTH);
 //        String fecha = año + "-" + mes + "-" + dia;
 //        String institucion = txtInstituciones.getText();
-//        String zona_laboral = cbxZonaLaboral.getText();
+//        String zona_laboral = cbxZonaLaboral.getSelectedItem().toString();
 //        int salario_basico = Integer.parseInt(txtSalarioBasico.getText());
-//        String tipo_cuenta= cbxTipoCuenta.getText();
-//        String periodo_pago = cbxPeriodoPago.getText();
-//        int arl = cbxARL.getText();
-//        String tipo_contrato = cbxTipoContacto.getText();
+//        String tipo_cuenta= cbxTipoCuenta.getSelectedItem().toString();
+//        String periodo_pago = cbxPeriodoPago.getSelectedItem().toString();
+//        int arl = cbxARL.getSelectedItem().toString();
+//        String tipo_contrato = cbxTipoContacto..getSelectedItem().toString();
 //        int numero_documento = Integer.parseInt(txtNumeroDocumento.getText());
 //        int año2 = dateRetiro.getSelectedDate().get(Calendar.YEAR);
 //        int mes2 = dateRetiro.getSelectedDate().get(Calendar.MONTH) + 1;
 //        int dia2 = dateRetiro.getSelectedDate().get(Calendar.DAY_OF_MONTH);
 //        String fecha2 = año2 + "-" + mes2 + "-" + dia2;
 //        int nit = Integer.parseInt(txtNit.getText());
-//        String ciudad= cbxCiudad.getText();
-//        String banco_cuenta= cbxBancoCuenta.getText();
+//        String ciudad= cbxCiudad.getSelectedItem().toString();
+//        String banco_cuenta= cbxBancoCuenta.getSelectedItem().toString();
 //        int numero_cuenta = Integer.parseInt(txtNumeroCuenta.getText());
-//        String fonde_salud= cbxFondoSalud.getText();
+//        String fonde_salud= cbxFondoSalud.getSelectedItem().toString();
 //        int atep = Integer.parseInt(txtAtep.getText());
 //        Ctrl.guardar();
 
@@ -317,6 +423,8 @@ public class FormRegContratoAprendiz extends javax.swing.JFrame {
       } 
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private datechooser.beans.DateChooserCombo DateIngreso;
+    private datechooser.beans.DateChooserCombo DateRetiro;
     private javax.swing.JComboBox<String> cbxARL;
     private javax.swing.JComboBox<String> cbxBancoCuenta;
     private javax.swing.JComboBox<String> cbxCiudad;
