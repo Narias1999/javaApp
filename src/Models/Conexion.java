@@ -10,14 +10,14 @@ import java.sql.DriverManager;
 
 /**
  *
- * @author user
+ * @author USUARIO
  */
 public class Conexion {
         Connection ConexBD = null;
     public Connection getCempBD (){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            ConexBD = DriverManager.getConnection("jdbc:mysql://localhost/Sena_Adsi","root","");
+            ConexBD = DriverManager.getConnection("jdbc:mysql://localhost/Sena_ADSI","root","");
         }catch (Exception e){
             System.out.println("Error de conexion"+e.getMessage());
         }
