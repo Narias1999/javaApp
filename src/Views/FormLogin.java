@@ -5,23 +5,27 @@
  */
 package Views;
 
+import Controllers.Ctrllogin;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author user
+ * @author BAUTISTA TTRIANA
  */
 public class FormLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form mainForm
+     * Creates new form FormLogin
      */
     public FormLogin() {
         
         initComponents();
+<<<<<<< HEAD
         setLocationRelativeTo(null);
         setTitle("LOGIN");
         
+=======
+>>>>>>> c26d05708aeeb8957ea5b414821f550ba7a8bb49
     }
 
     /**
@@ -33,65 +37,80 @@ public class FormLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtCONTRASEÑA = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        btINGRESAR = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtCONTRASEÑA2 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        btINGRESAR2 = new javax.swing.JButton();
         btSALIR = new javax.swing.JButton();
         cbUSUARIOS = new javax.swing.JComboBox();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-
-        jRadioButton1.setText("jRadioButton1");
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+=======
+>>>>>>> c26d05708aeeb8957ea5b414821f550ba7a8bb49
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("INGRESO DE USUARIOS");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 210, 20));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setText("INGRESO DE USUARIOS");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 210, 20));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/man.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 40, 40));
-        jPanel2.add(txtCONTRASEÑA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 200, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/man.png"))); // NOI18N
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 40, 40));
+        jPanel4.add(txtCONTRASEÑA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 200, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/key.png"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 40, 40));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/key.png"))); // NOI18N
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 40, 40));
 
-        btINGRESAR.setText("INGRESAR");
-        btINGRESAR.addActionListener(new java.awt.event.ActionListener() {
+        btINGRESAR2.setText("INGRESAR");
+        btINGRESAR2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btINGRESARActionPerformed(evt);
+                btINGRESAR2ActionPerformed(evt);
             }
         });
-        jPanel2.add(btINGRESAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        jPanel4.add(btINGRESAR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
 
         btSALIR.setText("SALIR");
-        jPanel2.add(btSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 80, -1));
+        jPanel4.add(btSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 80, -1));
 
-        jPanel2.add(cbUSUARIOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 200, -1));
+        jPanel4.add(cbUSUARIOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 200, -1));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, 30));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/exit (1).png"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, 30));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/login (1).png"))); // NOI18N
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, 30));
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 390));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 410, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 390, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btINGRESARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btINGRESARActionPerformed
-        ingresar();
-    }//GEN-LAST:event_btINGRESARActionPerformed
+    private void btINGRESAR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btINGRESAR2ActionPerformed
+
+    }//GEN-LAST:event_btINGRESAR2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,7 +138,6 @@ public class FormLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -128,22 +146,56 @@ public class FormLogin extends javax.swing.JFrame {
             }
         });
     }
-    void ingresar(){
-        
-        String usuario =cbUSUARIOS.getSelectedItem().toString();
-        String clave=txtCONTRASEÑA.getText();
+     String Usuario;
+    String Clave;
+
+    public void setusuario() {
+        String usuario = cbUSUARIOS.getSelectedItem().toString();
+        Ctrllogin obj = new Ctrllogin();
+        obj.setUsuario(usuario);
+
     }
+
+    public void setClave() {
+        String Clave = txtCONTRASEÑA2.getText();
+        Ctrllogin obj = new Ctrllogin();
+        obj.setClave(Clave);
+
+    }
+
+    public void validar() {
+        Ctrllogin obj = new Ctrllogin();
+        int estado = obj.validar();
+        if (estado == 1) {
+            JOptionPane.showMessageDialog(null, "bienvenido  Usuario y contraseña correctos");
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario y contraseña son incorrectos");
+        }
+
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btINGRESAR;
+    private javax.swing.JButton btINGRESAR1;
+    private javax.swing.JButton btINGRESAR2;
     private javax.swing.JButton btSALIR;
     private javax.swing.JComboBox cbUSUARIOS;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField txtCONTRASEÑA;
+    private javax.swing.JTextField txtCONTRASEÑA1;
+    private javax.swing.JTextField txtCONTRASEÑA2;
     // End of variables declaration//GEN-END:variables
 }
