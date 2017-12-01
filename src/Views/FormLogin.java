@@ -20,12 +20,8 @@ public class FormLogin extends javax.swing.JFrame {
     public FormLogin() {
         
         initComponents();
-<<<<<<< HEAD
         setLocationRelativeTo(null);
         setTitle("LOGIN");
-        
-=======
->>>>>>> c26d05708aeeb8957ea5b414821f550ba7a8bb49
     }
 
     /**
@@ -49,11 +45,8 @@ public class FormLogin extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-<<<<<<< HEAD
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-=======
->>>>>>> c26d05708aeeb8957ea5b414821f550ba7a8bb49
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
