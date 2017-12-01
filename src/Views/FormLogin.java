@@ -102,7 +102,9 @@ public class FormLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btINGRESAR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btINGRESAR2ActionPerformed
-
+setClave();
+setusuario();
+validar();
     }//GEN-LAST:event_btINGRESAR2ActionPerformed
 
     /**

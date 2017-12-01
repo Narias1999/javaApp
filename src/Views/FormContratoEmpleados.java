@@ -5,6 +5,10 @@
  */
 package Views;
 
+import Controllers.Ctrl_Datos_contrato;
+import java.sql.ResultSet;
+import java.util.Calendar;
+
 /**
  *
  * @author Hugo Carreño
@@ -300,6 +304,11 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         jPanel1.add(btELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 610, -1, -1));
 
         btMODIFICAR.setText("GUARDAR");
+        btMODIFICAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMODIFICARActionPerformed(evt);
+            }
+        });
         jPanel1.add(btMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
 
         btBUSCAR.setText("BUSCAR");
@@ -333,6 +342,10 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
     private void cbxTCONTRATOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTCONTRATOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbxTCONTRATOActionPerformed
+
+    private void btMODIFICARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMODIFICARActionPerformed
+        guardar();        // TODO add your handling code here:
+    }//GEN-LAST:event_btMODIFICARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -368,6 +381,78 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
             }
         });
     }
+
+    void guardar() {
+        Ctrl_Datos_contrato obCtrl = new Ctrl_Datos_contrato();
+        //aca vamos a tomar la fecha nombrare el elemento
+        String num_doc = txtDOCUMENTO.getText();
+        int año = dtINGRESO.getSelectedDate().get(Calendar.YEAR);
+        int mes = dtINGRESO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int dia = dtINGRESO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_ing = año + "-" + mes + "-" + dia;
+        int años = dtRETIRO.getSelectedDate().get(Calendar.YEAR);
+        int meses = dtRETIRO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int dias = dtRETIRO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_retiro = años + "-" + meses + "-" + dias;
+        String institucion = txtINSTITUACION.getText();
+        String salario_basico = txtBASICO.getText();
+        String num_cta = txtNCUENTA.getText();
+        String atep = txtATEP.getText();
+        obCtrl.guardar(num_cta, num_doc, fch_ing, fch_retiro, institucion, atep, dia, dias, dias, num_cta, num_cta, meses, salario_basico, num_cta, num_cta, años, dias);
+    }
+
+    void actualizar() {
+        Ctrl_Datos_contrato obCtrl = new Ctrl_Datos_contrato();
+        //aca vamos a tomar la fecha nombrare el elemento
+        String num_doc = txtDOCUMENTO.getText();
+        int año = dtINGRESO.getSelectedDate().get(Calendar.YEAR);
+        int mes = dtINGRESO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int dia = dtINGRESO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_ing = año + "-" + mes + "-" + dia;
+        int años = dtRETIRO.getSelectedDate().get(Calendar.YEAR);
+        int meses = dtRETIRO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int dias = dtRETIRO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_retiro = años + "-" + meses + "-" + dias;
+        String institucion = txtINSTITUACION.getText();
+        String salario_basico = txtBASICO.getText();
+        String num_cta = txtNCUENTA.getText();
+        String atep = txtATEP.getText();
+        obCtrl.actualizar(num_cta, num_doc, fch_ing, fch_retiro, institucion, atep, dia, dias, dias, num_cta, num_cta, meses, salario_basico, num_cta, num_cta, años, dias);
+    }
+
+    public void Eliminar() {
+        Ctrl_Datos_contrato objCtrl = new Ctrl_Datos_contrato();
+        String num_doc = txtDOCUMENTO.getText();
+        objCtrl.Eliminar(num_doc);
+ 
+    }
+
+    void cargarDatos() {
+        Ctrl_Datos_contrato objCtrl = new Ctrl_Datos_contrato();
+        String num_doc = txtDOCUMENTO.getText();
+        ResultSet datos = objCtrl.cargarDatos(num_doc);
+        String fch_ing = "", fch_retiro = "", institucion = "", salario_basico = "", num_cta = "", atep = "";
+
+        try {
+            while (datos.next()) {
+                fch_ing = datos.getString(2);
+                fch_retiro = datos.getString(3);
+                institucion = datos.getString(4);
+                salario_basico = datos.getString(5);
+                num_cta = datos.getString(6);
+                atep = datos.getString(7);
+            }
+        } catch (Exception e) {
+            System.out.println("error en vista: " + e);
+        }
+        dtINGRESO.setText(fch_ing);
+        dtRETIRO.setText(fch_retiro);
+        txtINSTITUACION.setText(institucion);
+        txtBASICO.setText(salario_basico);
+        txtNCUENTA.setText(num_cta);
+        txtATEP.setText(atep);
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NULL;
