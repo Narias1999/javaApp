@@ -7,12 +7,17 @@ package Models;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
 
 /**
  *
  * @author USUARIO
  */
 public class Conexion {
+
+    static Statement createStatement() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         Connection ConexBD = null;
     public Connection getCempBD (){
         try{
