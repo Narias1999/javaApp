@@ -5,6 +5,9 @@
  */
 package Views;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Andres
@@ -19,7 +22,14 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("INTERFACE REGISTRO DE CONTRATO PASANTIA");
     }
+   
+    public Image geticonImage() {
+        Image retValue = Toolkit.getDefaultToolkit().
+                getImage(ClassLoader.getSystemResource("Images/logoSena.png"));
 
+
+        return retValue;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -70,13 +80,14 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         btBUSCAR = new javax.swing.JButton();
         btMODIFICAR = new javax.swing.JButton();
         datacRETIRO = new datechooser.beans.DateChooserCombo();
-        dtINGRESO = new datechooser.beans.DateChooserCombo();
+        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jLabel1 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -173,7 +184,7 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         cbxARL.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE..." }));
         jPanel1.add(cbxARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 140, -1));
 
-        cbxDOCUMENTO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE..." }));
+        cbxDOCUMENTO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE...", "CEDULA CIUDADANIA", "TARJETA DE IDENTIDAD", "CEDULA EXTRANJERIA" }));
         cbxDOCUMENTO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxDOCUMENTOActionPerformed(evt);
@@ -210,13 +221,12 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         jPanel1.add(btGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 120, -1));
 
         btBUSCAR.setText("BUSCAR");
-        btBUSCAR.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(btBUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 120, -1));
 
         btMODIFICAR.setText("MODIFICAR");
         jPanel1.add(btMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 130, -1));
         jPanel1.add(datacRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 140, -1));
-        jPanel1.add(dtINGRESO, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 140, -1));
+        jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 140, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, -1, -1));
@@ -225,7 +235,7 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 368, 40, -1));
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 40, 30));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit.png"))); // NOI18N
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
@@ -289,7 +299,7 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
     private javax.swing.JComboBox cbxTIPOCUENTA;
     private javax.swing.JComboBox cbxZONALABORES;
     private datechooser.beans.DateChooserCombo datacRETIRO;
-    private datechooser.beans.DateChooserCombo dtINGRESO;
+    private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

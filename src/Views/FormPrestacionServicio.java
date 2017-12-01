@@ -34,17 +34,16 @@ public class FormPrestacionServicio extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        txtNCONTRATO = new javax.swing.JTextField();
+        txtNOMCONTRATISTA = new javax.swing.JTextField();
+        txtNUMCONTRATISTA = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        txtNDOCUMENTO = new javax.swing.JTextField();
+        txtDIRECCONTRATISTA = new javax.swing.JTextField();
+        txtEMAILCONTRATISTA = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -52,222 +51,249 @@ public class FormPrestacionServicio extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        txtPORCARL = new javax.swing.JTextField();
+        txtVALOR = new javax.swing.JTextField();
+        txtPENSION = new javax.swing.JTextField();
+        txtSERVICIO = new javax.swing.JTextField();
+        btnBUSCAR = new javax.swing.JButton();
+        btnMODIFICAR = new javax.swing.JButton();
+        btnELIMINAR = new javax.swing.JButton();
+        btnGUARDAR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        txtSEGURIDADSOCIAL = new javax.swing.JTextField();
+        txtAPORTEARL = new javax.swing.JTextField();
+        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
+        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        cbxDOCUMENTO = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText(" N° DE CONTRATO");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 121, -1));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText(" DATOS DEL CONTRATO DE PRESTACIONES DE SERIVCIOS");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 520, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 520, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("NOMBRE DEL CONTRATISTA");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 154, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("TIPO DE DOCUMENTO");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 121, 121, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 121, 150, -1));
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("CELULAR DEL CONTRATISTA");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 183, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 150, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 150, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 150, -1));
+        jPanel1.add(txtNCONTRATO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 150, -1));
+        jPanel1.add(txtNOMCONTRATISTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 150, -1));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtNUMCONTRATISTA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtNUMCONTRATISTAActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 150, -1));
+        jPanel1.add(txtNUMCONTRATISTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 150, -1));
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("TIPO DE CONTRATO");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 121, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 150, -1));
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText(" N° DE DOCUMENTO");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 121, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 150, -1));
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("DIRECCION CONTRATISTA");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 180, 20));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 180, 20));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("CORREO CONTRATISTA");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 160, 20));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 160, 20));
 
-        jTextField6.setText(" ");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        txtNDOCUMENTO.setText(" ");
+        txtNDOCUMENTO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                txtNDOCUMENTOActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 170, 28));
+        jPanel1.add(txtNDOCUMENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 170, 28));
 
-        jTextField7.setText("  ");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtDIRECCONTRATISTA.setText("  ");
+        txtDIRECCONTRATISTA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtDIRECCONTRATISTAActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 170, 28));
+        jPanel1.add(txtDIRECCONTRATISTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 170, 28));
 
-        jTextField8.setText(" ");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        txtEMAILCONTRATISTA.setText(" ");
+        txtEMAILCONTRATISTA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                txtEMAILCONTRATISTAActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 170, 28));
+        jPanel1.add(txtEMAILCONTRATISTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 170, 28));
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("APORTE PENSION");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("APORTE SEGURIDAD SOCIAL");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 150, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 200, -1));
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("FECHA DE INICIO");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 214, 121, -1));
 
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText(" % ARL");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 170, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 170, -1));
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setText("VALOR MENSUAL");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, -1, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
 
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("FECHA DE TERMINACION");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 170, 20));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 170, 20));
 
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 170, 30));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE..." }));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 170, 30));
 
-        jTextField9.setText(" ");
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        txtPORCARL.setText(" ");
+        txtPORCARL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                txtPORCARLActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 170, 28));
+        jPanel1.add(txtPORCARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 170, 28));
 
-        jTextField10.setText(" ");
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        txtVALOR.setText(" ");
+        txtVALOR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                txtVALORActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 170, 28));
+        jPanel1.add(txtVALOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 170, 28));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        txtPENSION.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                txtPENSIONActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 150, -1));
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 150, -1));
+        jPanel1.add(txtPENSION, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 150, -1));
+        jPanel1.add(txtSERVICIO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 150, -1));
 
-        jButton1.setText("BUSCAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBUSCAR.setText("BUSCAR");
+        btnBUSCAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBUSCARActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
+        jPanel1.add(btnBUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, -1, -1));
 
-        jButton2.setText("MODIFICAR");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+        btnMODIFICAR.setText("MODIFICAR");
+        jPanel1.add(btnMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, -1, -1));
 
-        jButton3.setText("ELIMINAR");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, -1));
+        btnELIMINAR.setText("ELIMINAR");
+        jPanel1.add(btnELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, -1, -1));
 
-        jButton4.setText("GUARDAR");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
+        btnGUARDAR.setText("GUARDAR");
+        jPanel1.add(btnGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("APORTE ARL");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 140, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 140, -1));
 
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setText("SERVICIO OBJETO DEL CONTRATO");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 180, -1));
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 150, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 240, -1));
+        jPanel1.add(txtSEGURIDADSOCIAL, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 150, -1));
 
-        jTextField11.setText(" ");
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        txtAPORTEARL.setText(" ");
+        txtAPORTEARL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                txtAPORTEARLActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 170, 28));
+        jPanel1.add(txtAPORTEARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 170, 28));
+        jPanel1.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 150, -1));
+        jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 170, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
+        jLabel18.setText("jLabel18");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, 32, 32));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit.png"))); // NOI18N
+        jLabel19.setText("jLabel18");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 32, 32));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
+        jLabel20.setText("jLabel18");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 32, 32));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
+        jLabel21.setText("jLabel18");
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 32, 32));
+
+        cbxDOCUMENTO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE...", "CEDULA DE CIUDADANIA", "TARJETA DE IDENTIDAD", "CEDULA DE EXTRANGERIA" }));
+        jPanel1.add(cbxDOCUMENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 150, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtNUMCONTRATISTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNUMCONTRATISTAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtNUMCONTRATISTAActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtNDOCUMENTOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNDOCUMENTOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtNDOCUMENTOActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtDIRECCONTRATISTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDIRECCONTRATISTAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtDIRECCONTRATISTAActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void txtEMAILCONTRATISTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEMAILCONTRATISTAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_txtEMAILCONTRATISTAActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void txtPORCARLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPORCARLActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_txtPORCARLActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void txtVALORActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVALORActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_txtVALORActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtPENSIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPENSIONActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtPENSIONActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBUSCARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBUSCARActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBUSCARActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void txtAPORTEARLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAPORTEARLActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_txtAPORTEARLActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,10 +331,13 @@ public class FormPrestacionServicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnBUSCAR;
+    private javax.swing.JButton btnELIMINAR;
+    private javax.swing.JButton btnGUARDAR;
+    private javax.swing.JButton btnMODIFICAR;
+    private javax.swing.JComboBox cbxDOCUMENTO;
+    private datechooser.beans.DateChooserCombo dateChooserCombo1;
+    private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -319,7 +348,11 @@ public class FormPrestacionServicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -328,18 +361,17 @@ public class FormPrestacionServicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField txtAPORTEARL;
+    private javax.swing.JTextField txtDIRECCONTRATISTA;
+    private javax.swing.JTextField txtEMAILCONTRATISTA;
+    private javax.swing.JTextField txtNCONTRATO;
+    private javax.swing.JTextField txtNDOCUMENTO;
+    private javax.swing.JTextField txtNOMCONTRATISTA;
+    private javax.swing.JTextField txtNUMCONTRATISTA;
+    private javax.swing.JTextField txtPENSION;
+    private javax.swing.JTextField txtPORCARL;
+    private javax.swing.JTextField txtSEGURIDADSOCIAL;
+    private javax.swing.JTextField txtSERVICIO;
+    private javax.swing.JTextField txtVALOR;
     // End of variables declaration//GEN-END:variables
 }
