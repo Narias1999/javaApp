@@ -389,7 +389,9 @@ public class FormRegistro extends javax.swing.JFrame {
         
         
     }
-
+    void save(){
+        String[] datos = { };
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btbuscar;
     private javax.swing.JButton bteliminar;
