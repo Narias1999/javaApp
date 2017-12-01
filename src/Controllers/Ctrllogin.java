@@ -5,7 +5,9 @@
  */
 package Controllers;
 
-import Models.login;
+import Models.BDlogin;
+import Models.BDlogin;
+import java.sql.ResultSet;
 
 /**
  *
@@ -17,13 +19,13 @@ public class Ctrllogin {
 
     public void setUsuario(String Usuario) {
         this.Usuario = Usuario;
-        login obj = new login();
+        BDlogin obj = new BDlogin();
         obj.getCountUsu();
     }
 
     public void setClave(String Clave) {
         this.Clave = Clave;
-        login obj = new login();
+        BDlogin obj = new BDlogin();
         obj.getCountUsu();
     }
 
@@ -38,5 +40,10 @@ public class Ctrllogin {
         }
         return x;
 
+    }
+    public ResultSet getcombobox() {
+        BDlogin obBD = new BDlogin();
+        ResultSet rs = obBD.loadcombobox();
+        return rs;
     }
 }
