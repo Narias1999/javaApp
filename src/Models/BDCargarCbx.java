@@ -5,6 +5,7 @@
  */
 package Models;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -13,6 +14,9 @@ import java.sql.Statement;
  * @author Mariela-pc
  */
 public class BDCargarCbx {
+    
+    Conexion Conx = new Conexion();
+    Connection Conexion = Conx.getCempBD();
 
     public ResultSet cargarCBX_FondoSalud() {
         ResultSet datos = null;
@@ -29,7 +33,7 @@ public class BDCargarCbx {
     public ResultSet getId_FondoSalud(String nom) {
         ResultSet datos = null;
         try {
-            String sql = "select cod from fondo_salud where nom ='" + nom + "' ";
+            String sql = "select cod from fondo_salud where nom ='" + nom + "'";
             Statement st = Conexion.createStatement();
             datos = st.executeQuery(sql);
         } catch (Exception e) {
