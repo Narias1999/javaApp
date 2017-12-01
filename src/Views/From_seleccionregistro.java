@@ -16,6 +16,7 @@ public class From_seleccionregistro extends javax.swing.JFrame {
      */
     public From_seleccionregistro() {
         initComponents();
+         setLocationRelativeTo(null);
     }
 
     /**
@@ -33,6 +34,12 @@ public class From_seleccionregistro extends javax.swing.JFrame {
         btREGCONTRATISTA = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btPERMISOS = new javax.swing.JButton();
+        btCONTRATOS = new javax.swing.JButton();
+        btVACACIONES = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -55,9 +62,27 @@ public class From_seleccionregistro extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 50, 50));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add-user (1).png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 50, 50));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 50, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 240));
+        btPERMISOS.setText("PERMISOS");
+        jPanel1.add(btPERMISOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 150, -1));
+
+        btCONTRATOS.setText("CONTRATOS");
+        jPanel1.add(btCONTRATOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 160, -1));
+
+        btVACACIONES.setText("VACACIONES");
+        jPanel1.add(btVACACIONES, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 150, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sunbed.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 50, 50));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clipboard.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 30, 50));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/contract.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 50, 60));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -99,15 +124,18 @@ public class From_seleccionregistro extends javax.swing.JFrame {
     }
     
     
-    
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btCONTRATOS;
+    private javax.swing.JButton btPERMISOS;
     private javax.swing.JButton btREGCONTRATISTA;
     private javax.swing.JButton btREGEMPLEADOS;
+    private javax.swing.JButton btVACACIONES;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
