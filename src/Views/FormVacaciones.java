@@ -18,7 +18,6 @@ public class FormVacaciones extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("INTERFACE-VACACIONES");
-        
     }
 
     /**
@@ -54,8 +53,8 @@ public class FormVacaciones extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtobs = new javax.swing.JTextArea();
-        dtfechadesde = new datechooser.beans.DateChooserCombo();
-        dtfechahasta = new datechooser.beans.DateChooserCombo();
+        dtfecdes = new datechooser.beans.DateChooserCombo();
+        dtfechast = new datechooser.beans.DateChooserCombo();
         jLabel4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -70,7 +69,7 @@ public class FormVacaciones extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("                      VACACIONES");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 370, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 370, 20));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("OBSEVACIONES");
@@ -128,19 +127,19 @@ public class FormVacaciones extends javax.swing.JFrame {
 
         btelim.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btelim.setText("ELIMINAR");
-        jPanel1.add(btelim, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 110, -1));
+        jPanel1.add(btelim, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 110, -1));
 
         btguar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btguar.setText("GUARDAR");
-        jPanel1.add(btguar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 110, -1));
+        jPanel1.add(btguar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 110, -1));
 
         btbusc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btbusc.setText("BUSCAR");
-        jPanel1.add(btbusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, 100, -1));
+        jPanel1.add(btbusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 100, -1));
 
         btmod.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btmod.setText("MODIFICAR");
-        jPanel1.add(btmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 110, -1));
+        jPanel1.add(btmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 110, -1));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 680, 10));
 
         txtobs.setColumns(20);
@@ -150,7 +149,7 @@ public class FormVacaciones extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 520, 90));
 
-        dtfechadesde.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+        dtfecdes.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
                 new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
                     new java.awt.Color(0, 0, 0),
@@ -191,9 +190,9 @@ public class FormVacaciones extends javax.swing.JFrame {
                 (datechooser.view.BackRenderer)null,
                 false,
                 true)));
-    jPanel1.add(dtfechadesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
+    jPanel1.add(dtfecdes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
 
-    dtfechahasta.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
+    dtfechast.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
         new datechooser.view.appearance.ViewAppearance("custom",
             new datechooser.view.appearance.swing.SwingCellAppearance(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 11),
                 new java.awt.Color(0, 0, 0),
@@ -234,21 +233,21 @@ public class FormVacaciones extends javax.swing.JFrame {
             (datechooser.view.BackRenderer)null,
             false,
             true)));
-jPanel1.add(dtfechahasta, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 170, -1));
+jPanel1.add(dtfechast, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 170, -1));
 
 jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
-jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 60, 40));
+jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 60, 40));
 
 jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
-jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 60, 50));
+jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 60, 50));
 
 jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit.png"))); // NOI18N
-jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 60, 50));
+jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 60, 50));
 
 jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
-jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 70, 40));
+jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 70, 40));
 
-getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 500));
+getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 490));
 
 pack();
 }// </editor-fold>//GEN-END:initComponents
@@ -293,8 +292,8 @@ pack();
     private javax.swing.JButton btelim;
     private javax.swing.JButton btguar;
     private javax.swing.JButton btmod;
-    private datechooser.beans.DateChooserCombo dtfechadesde;
-    private datechooser.beans.DateChooserCombo dtfechahasta;
+    private datechooser.beans.DateChooserCombo dtfecdes;
+    private datechooser.beans.DateChooserCombo dtfechast;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
