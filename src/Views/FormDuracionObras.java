@@ -5,6 +5,9 @@
  */
 package Views;
 
+import java.sql.ResultSet;
+import java.util.Calendar;
+
 /**
  *
  * @author Hugo Carreño
@@ -371,6 +374,8 @@ public class FormDuracionObras extends javax.swing.JFrame {
             }
         });
     }
+    
+    
     
     
 

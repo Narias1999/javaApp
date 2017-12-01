@@ -5,6 +5,9 @@
  */
 package Views;
 
+import java.sql.ResultSet;
+import java.util.Calendar;
+
 /**
  *
  * @author Yarelis Contreras
@@ -303,7 +306,7 @@ public class FormContratoObra extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
