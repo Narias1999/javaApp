@@ -17,8 +17,11 @@ public class FormLogin extends javax.swing.JFrame {
      * Creates new form mainForm
      */
     public FormLogin() {
+        
         initComponents();
+        setLocationRelativeTo(null);
         setTitle("LOGIN");
+        
     }
 
     /**
@@ -45,6 +48,7 @@ public class FormLogin extends javax.swing.JFrame {
         jRadioButton1.setText("jRadioButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
