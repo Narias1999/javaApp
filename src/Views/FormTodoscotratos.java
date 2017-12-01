@@ -36,6 +36,8 @@ public class FormTodoscotratos extends javax.swing.JFrame {
         btOBRA = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -55,9 +57,19 @@ public class FormTodoscotratos extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btEMPLEADO.setText("EMPLEADO");
-        jPanel1.add(btEMPLEADO, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
+        btEMPLEADO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEMPLEADOActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btEMPLEADO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         btAPRENDIZ.setText("APRENDIZ");
+        btAPRENDIZ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAPRENDIZActionPerformed(evt);
+            }
+        });
         jPanel1.add(btAPRENDIZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, -1, -1));
 
         btOBRA.setText("OBRA");
@@ -66,14 +78,20 @@ public class FormTodoscotratos extends javax.swing.JFrame {
                 btOBRAActionPerformed(evt);
             }
         });
-        jPanel1.add(btOBRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel1.add(btOBRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 80, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("TIPOS DE CONTRATOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 210, -1));
 
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 60, 40));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/repairing.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 50, 40));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/student.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 50, 40));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/network.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 50, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 220));
 
@@ -81,8 +99,19 @@ public class FormTodoscotratos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btOBRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOBRAActionPerformed
-        // TODO add your handling code here:
+        FormContratoObra form = new FormContratoObra();
+        showForm(form);
     }//GEN-LAST:event_btOBRAActionPerformed
+
+    private void btEMPLEADOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEMPLEADOActionPerformed
+       FormContratoEmpleados form = new FormContratoEmpleados();
+        showForm(form);
+    }//GEN-LAST:event_btEMPLEADOActionPerformed
+
+    private void btAPRENDIZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAPRENDIZActionPerformed
+        FormRegContratoAprendiz form = new FormRegContratoAprendiz();
+        showForm(form);
+    }//GEN-LAST:event_btAPRENDIZActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +159,8 @@ public class FormTodoscotratos extends javax.swing.JFrame {
     private javax.swing.JButton btOBRA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
