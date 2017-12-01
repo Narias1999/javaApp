@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : Conexion
+Source Server         : java
 Source Server Version : 50505
 Source Host           : localhost:3306
-Source Database       : sena_adsi
+Source Database       : java
 
 Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-11-30 11:14:58
+Date: 2017-12-01 07:32:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,6 +22,7 @@ DROP TABLE IF EXISTS `arl`;
 CREATE TABLE `arl` (
   `cod` varchar(10) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
+  `nit` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -36,6 +37,7 @@ DROP TABLE IF EXISTS `aseguradora`;
 CREATE TABLE `aseguradora` (
   `cod` varchar(10) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
+  `nit` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -50,6 +52,7 @@ DROP TABLE IF EXISTS `bancos`;
 CREATE TABLE `bancos` (
   `cod` varchar(10) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
+  `nit` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -64,6 +67,7 @@ DROP TABLE IF EXISTS `caja_compensacion`;
 CREATE TABLE `caja_compensacion` (
   `cod` varchar(10) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
+  `nit` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -124,7 +128,7 @@ CREATE TABLE `contrato_diferente` (
   `arl` int(15) DEFAULT NULL,
   `vto_soat` varchar(15) DEFAULT NULL,
   `vto_tecnomecanica` varchar(15) DEFAULT NULL,
-  `tipo` int(1) DEFAULT NULL,
+  `tipo` int(1) DEFAULT NULL COMMENT '1 tracto sucesivo, 2 arrendamiento inmueble, 3 arrendamiento vehiculo 4 prestacion servicios',
   PRIMARY KEY (`id`),
   KEY `num_doc` (`num_doc`),
   CONSTRAINT `contrato_diferente_ibfk_1` FOREIGN KEY (`num_doc`) REFERENCES `empleados_contratista` (`num_doc`)
@@ -156,7 +160,7 @@ CREATE TABLE `datos_contrato` (
   `cod_fon_salud` varchar(10) DEFAULT NULL,
   `cod_arl` varchar(10) DEFAULT NULL,
   `atep` int(10) DEFAULT NULL,
-  `tipo` int(2) DEFAULT NULL,
+  `tipo` int(2) DEFAULT NULL COMMENT '1 aprendiz sena, 2 contratista pasantia',
   PRIMARY KEY (`id`),
   KEY `cod_ciudad` (`cod_ciudad`),
   KEY `cod_bancos` (`cod_bancos`),
@@ -177,19 +181,37 @@ CREATE TABLE `datos_contrato` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for `det_cursos`
+-- ----------------------------
+DROP TABLE IF EXISTS `det_cursos`;
+CREATE TABLE `det_cursos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `cod_cursos` varchar(10) NOT NULL,
+  `id_contratos` int(10) DEFAULT NULL,
+  `cod_instituciones` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_contratos` (`id_contratos`),
+  KEY `cod_cursos` (`cod_cursos`),
+  KEY `cod_institucion` (`cod_instituciones`),
+  CONSTRAINT `det_cursos_ibfk_1` FOREIGN KEY (`id_contratos`) REFERENCES `registro_contratos` (`id`),
+  CONSTRAINT `det_cursos_ibfk_2` FOREIGN KEY (`cod_cursos`) REFERENCES `listado_cursos` (`cod`),
+  CONSTRAINT `det_cursos_ibfk_3` FOREIGN KEY (`cod_instituciones`) REFERENCES `instituciones` (`cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of det_cursos
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `det_permiso_vacaciones`
 -- ----------------------------
 DROP TABLE IF EXISTS `det_permiso_vacaciones`;
 CREATE TABLE `det_permiso_vacaciones` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `cod_permiso` int(10) DEFAULT NULL,
   `hor_fch_desde` varchar(20) DEFAULT NULL,
   `desc` varchar(255) DEFAULT NULL,
   `hor_fch_hasta` varchar(20) DEFAULT NULL,
-  `obs` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `cod_permiso` (`cod_permiso`),
-  CONSTRAINT `cod` FOREIGN KEY (`cod_permiso`) REFERENCES `permisos_vaciones` (`cod`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -257,6 +279,7 @@ DROP TABLE IF EXISTS `fondo_pensiones`;
 CREATE TABLE `fondo_pensiones` (
   `cod` varchar(10) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
+  `nit` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -271,11 +294,26 @@ DROP TABLE IF EXISTS `fondo_salud`;
 CREATE TABLE `fondo_salud` (
   `cod` varchar(10) NOT NULL,
   `nom` varchar(50) DEFAULT NULL,
+  `nit` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of fondo_salud
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `instituciones`
+-- ----------------------------
+DROP TABLE IF EXISTS `instituciones`;
+CREATE TABLE `instituciones` (
+  `cod` varchar(10) NOT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of instituciones
 -- ----------------------------
 
 -- ----------------------------
@@ -300,10 +338,12 @@ CREATE TABLE `permisos_vaciones` (
   `cod` int(10) NOT NULL,
   `num_doc` varchar(15) DEFAULT NULL,
   `tipo` varchar(1) DEFAULT NULL COMMENT '1 vacaciones 2 permisos',
-  PRIMARY KEY (`cod`),
+  `det_permiso` int(10) DEFAULT NULL,
   KEY `cod` (`cod`),
-  KEY `doc_detalle` (`num_doc`),
-  CONSTRAINT `doc_detalle` FOREIGN KEY (`num_doc`) REFERENCES `empleados_contratista` (`num_doc`)
+  KEY `num_doc` (`num_doc`),
+  KEY `det_permiso` (`det_permiso`),
+  CONSTRAINT `permisos_vaciones_ibfk_1` FOREIGN KEY (`num_doc`) REFERENCES `empleados_contratista` (`num_doc`),
+  CONSTRAINT `permisos_vaciones_ibfk_2` FOREIGN KEY (`det_permiso`) REFERENCES `det_permiso_vacaciones` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -345,7 +385,6 @@ CREATE TABLE `registro_contratos` (
   `SOAT` varchar(40) DEFAULT NULL,
   `cod_aseguradora` varchar(10) DEFAULT NULL,
   `f_vencimiento` varchar(20) DEFAULT NULL,
-  `cod_curso` varchar(10) DEFAULT NULL,
   `institucion` varchar(50) DEFAULT NULL,
   `f_certificacion` varchar(20) DEFAULT NULL,
   `f_venci_certficacion` varchar(20) DEFAULT NULL,
@@ -359,9 +398,7 @@ CREATE TABLE `registro_contratos` (
   KEY `caja_compensaccion` (`caja_compensaccion`),
   KEY `cod_arl` (`cod_arl`),
   KEY `cod_aseguradora` (`cod_aseguradora`),
-  KEY `cod_curso` (`cod_curso`),
   CONSTRAINT `registro_contratos_ibfk_1` FOREIGN KEY (`cargos_cod`) REFERENCES `cargos` (`cod`),
-  CONSTRAINT `registro_contratos_ibfk_10` FOREIGN KEY (`cod_curso`) REFERENCES `listado_cursos` (`cod`),
   CONSTRAINT `registro_contratos_ibfk_3` FOREIGN KEY (`cod_ciudad`) REFERENCES `ciudades` (`cod`),
   CONSTRAINT `registro_contratos_ibfk_4` FOREIGN KEY (`cod_banco_cta`) REFERENCES `bancos` (`cod`),
   CONSTRAINT `registro_contratos_ibfk_5` FOREIGN KEY (`fon_salud`) REFERENCES `fondo_salud` (`cod`),
