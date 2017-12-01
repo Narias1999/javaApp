@@ -5,6 +5,9 @@
  */
 package Views;
 
+import Controllers.Ctrllogin;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author BAUTISTA TTRIANA
@@ -130,6 +133,33 @@ public class FormLogin extends javax.swing.JFrame {
                 new FormLogin().setVisible(true);
             }
         });
+    }
+     String Usuario;
+    String Clave;
+
+    public void setusuario() {
+        String usuario = cbUSUARIOS.getSelectedItem().toString();
+        Ctrllogin obj = new Ctrllogin();
+        obj.setUsuario(usuario);
+
+    }
+
+    public void setClave() {
+        String Clave = txtCONTRASEÑA2.getText();
+        Ctrllogin obj = new Ctrllogin();
+        obj.setClave(Clave);
+
+    }
+
+    public void validar() {
+        Ctrllogin obj = new Ctrllogin();
+        int estado = obj.validar();
+        if (estado == 1) {
+            JOptionPane.showMessageDialog(null, "bienvenido  Usuario y contraseña correctos");
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario y contraseña son incorrectos");
+        }
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
