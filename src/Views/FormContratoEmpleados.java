@@ -5,6 +5,7 @@
  */
 package Views;
 
+import Controllers.CtrlCargarCbx;
 import Controllers.Ctrl_Datos_contrato;
 import java.sql.ResultSet;
 import java.util.Calendar;
@@ -22,6 +23,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         initComponents();
         setTitle("INTERFACE REGISTRO DE CONTRATOS EMPLEADOS");
         setLocationRelativeTo(null);
+        cargarCBX();
     }
 
     /**
@@ -340,7 +342,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbxTCONTRATOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTCONTRATOActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_cbxTCONTRATOActionPerformed
 
     private void btMODIFICARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMODIFICARActionPerformed
@@ -380,6 +382,38 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
                 new FormContratoEmpleados().setVisible(true);
             }
         });
+    }
+
+    void cargarCBX() {
+        CtrlCargarCbx ctrl = new CtrlCargarCbx();
+        ResultSet data = null;
+        data = ctrl.cargarCBX_FondoSalud();
+        try {
+            while (data.next()) {
+                cbxSALUD.addItem(data.getString("nom"));
+            }
+            data = ctrl.cargarCBX_arl();
+            while (data.next()) {
+                cbxARL.addItem(data.getString("nom"));
+            }
+            data = ctrl.cargarCBX_aseguradora();
+            while (data.next()) {
+                cbxASEGURADORA.addItem(data.getString("nom"));
+            }
+            data = ctrl.cargarCBX_bancos();
+            while (data.next()) {
+                cbxBCUENTA.addItem(data.getString("nom"));
+            }
+            data = ctrl.cargarCBX_caja_comp();
+            while (data.next()) {
+                cbxCOMPENSACION.addItem(data.getString("nom"));
+            }
+            data = ctrl.cargarCBX_fondop();
+            while (data.next()) {
+                cbxPENSIONES.addItem(data.getString("nom"));
+            }
+        } catch (Exception e) {
+        }
     }
 
     void guardar() {
@@ -424,7 +458,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         Ctrl_Datos_contrato objCtrl = new Ctrl_Datos_contrato();
         String num_doc = txtDOCUMENTO.getText();
         objCtrl.Eliminar(num_doc);
- 
+
     }
 
     void cargarDatos() {
