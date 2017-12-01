@@ -16,6 +16,7 @@ public class FormRegistro extends javax.swing.JFrame {
      */
     public FormRegistro() {
         initComponents();
+        setTitle("Datos del empleado");
     
                 
     }
@@ -77,7 +78,6 @@ public class FormRegistro extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -88,7 +88,7 @@ public class FormRegistro extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("                                                         DATOS DEL EMPLEADO");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 840, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 840, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("RH");
@@ -311,9 +311,8 @@ public class FormRegistro extends javax.swing.JFrame {
 
     jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
     jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, -1, -1));
-    jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 780, 10));
 
-    getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 990, 810));
+    getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 840, 620));
 
     pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -430,7 +429,6 @@ public class FormRegistro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
