@@ -5,6 +5,9 @@
  */
 package Views;
 
+import Controllers.Ctrllogin;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author BAUTISTA TTRIANA
@@ -15,7 +18,14 @@ public class FormLogin extends javax.swing.JFrame {
      * Creates new form FormLogin
      */
     public FormLogin() {
+        
         initComponents();
+<<<<<<< HEAD
+        setLocationRelativeTo(null);
+        setTitle("LOGIN");
+        
+=======
+>>>>>>> c26d05708aeeb8957ea5b414821f550ba7a8bb49
     }
 
     /**
@@ -39,6 +49,11 @@ public class FormLogin extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+=======
+>>>>>>> c26d05708aeeb8957ea5b414821f550ba7a8bb49
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +109,9 @@ public class FormLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btINGRESAR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btINGRESAR2ActionPerformed
-
+setClave();
+setusuario();
+validar();
     }//GEN-LAST:event_btINGRESAR2ActionPerformed
 
     /**
@@ -130,6 +147,33 @@ public class FormLogin extends javax.swing.JFrame {
                 new FormLogin().setVisible(true);
             }
         });
+    }
+     String Usuario;
+    String Clave;
+
+    public void setusuario() {
+        String usuario = cbUSUARIOS.getSelectedItem().toString();
+        Ctrllogin obj = new Ctrllogin();
+        obj.setUsuario(usuario);
+
+    }
+
+    public void setClave() {
+        String Clave = txtCONTRASEÑA2.getText();
+        Ctrllogin obj = new Ctrllogin();
+        obj.setClave(Clave);
+
+    }
+
+    public void validar() {
+        Ctrllogin obj = new Ctrllogin();
+        int estado = obj.validar();
+        if (estado == 1) {
+            JOptionPane.showMessageDialog(null, "bienvenido  Usuario y contraseña correctos");
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario y contraseña son incorrectos");
+        }
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

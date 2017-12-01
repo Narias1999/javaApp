@@ -7,8 +7,8 @@ package Controllers;
 
 /**
  *
- * @author user
+ * @author Mariela-pc
  */
-public class CtrlMain {
+public class CtrlCargarCbx {
     
 }
