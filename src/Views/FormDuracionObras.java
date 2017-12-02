@@ -5,6 +5,10 @@
  */
 package Views;
 
+import Controllers.Ctrldatos_contrato;
+import java.sql.ResultSet;
+import java.util.Calendar;
+
 /**
  *
  * @author Hugo Carreño
@@ -298,15 +302,30 @@ public class FormDuracionObras extends javax.swing.JFrame {
         jPanel1.add(lbVENCIMIENTO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 140, 20));
 
         btELIMINAR.setText("ELIMINAR");
+        btELIMINAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btELIMINARActionPerformed(evt);
+            }
+        });
         jPanel1.add(btELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 610, -1, -1));
 
         btMODIFICAR.setText("GUARDAR");
+        btMODIFICAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMODIFICARActionPerformed(evt);
+            }
+        });
         jPanel1.add(btMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
 
         btBUSCAR.setText("BUSCAR");
         jPanel1.add(btBUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 610, -1, -1));
 
         btGUARDAR.setText("MODIFICAR");
+        btGUARDAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGUARDARActionPerformed(evt);
+            }
+        });
         jPanel1.add(btGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, -1, -1));
         jPanel1.add(dtVENCIMIENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 520, 130, -1));
         jPanel1.add(dtINGRESO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 130, -1));
@@ -334,6 +353,21 @@ public class FormDuracionObras extends javax.swing.JFrame {
     private void cbxTCONTRATOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTCONTRATOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbxTCONTRATOActionPerformed
+
+    private void btMODIFICARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMODIFICARActionPerformed
+        // TODO add your handling code here:
+        guardar();
+    }//GEN-LAST:event_btMODIFICARActionPerformed
+
+    private void btGUARDARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGUARDARActionPerformed
+        // TODO add your handling code here:
+        actualizar();
+    }//GEN-LAST:event_btGUARDARActionPerformed
+
+    private void btELIMINARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btELIMINARActionPerformed
+        // TODO add your handling code here:
+        eliminar();
+    }//GEN-LAST:event_btELIMINARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -370,8 +404,127 @@ public class FormDuracionObras extends javax.swing.JFrame {
             }
         });
     }
+
+
+    void guardar() {
+        Ctrldatos_contrato objctrl = new Ctrldatos_contrato();
+        String tp_ctto = cbxTCONTRATO.getSelectedItem().toString();
+        String num_doc = txtDOCUMENTO.getText();
+        int añofi = dtINGRESO.getSelectedDate().get(Calendar.YEAR);
+        int mesfi = dtINGRESO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int diafi = dtINGRESO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_ingreso = añofi + "-" + mesfi + "-" + diafi;
+        int añofr = dtRETIRO.getSelectedDate().get(Calendar.YEAR);
+        int mesfr = dtRETIRO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int diafr = dtRETIRO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_retiro = añofr + "-" + mesfr + "-" + diafr;
+        String institucion = txtINSTITUACION.getText();
+        int cod_zona = cbxLABORES.getSelectedIndex();
+        int cod_ciudad = cbxCIUDAD.getSelectedIndex();
+        int salario_basico = Integer.parseInt(txtBASICO.getText());
+        String cod_bancos = cbxBCUENTA.getSelectedItem().toString();
+        String tp_cta = cbxCUENTA.getSelectedItem().toString();
+        int num_cta = Integer.parseInt(txtNCUENTA.getText());
+        String periodo_pago = cbxPAGO.getSelectedItem().toString();
+        String cod_fon_salud = cbxSALUD.getSelectedItem().toString();
+        String cod_arl = cbxARL.getSelectedItem().toString();
+        int atep = Integer.parseInt(txtATEP.getText());
+        int tipo = cbxTCARGO.getSelectedIndex();
+        objctrl.getfrmduracionobras(tp_ctto, num_doc, fch_ingreso, fch_retiro, institucion, cod_zona, cod_ciudad, salario_basico, cod_bancos, tp_cta, num_cta, periodo_pago, cod_fon_salud, cod_arl, atep, tipo);
+    }
+
+    void actualizar() {
+        Ctrldatos_contrato obCtrlbd = new Ctrldatos_contrato();
+        int id=get_id();
+        String tp_ctto = cbxTCONTRATO.getSelectedItem().toString();
+        String num_doc = txtDOCUMENTO.getText();
+        int añofi = dtINGRESO.getSelectedDate().get(Calendar.YEAR);
+        int mesfi = dtINGRESO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int diafi = dtINGRESO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_ingreso = añofi + "-" + mesfi + "-" + diafi;
+        int añofr = dtRETIRO.getSelectedDate().get(Calendar.YEAR);
+        int mesfr = dtRETIRO.getSelectedDate().get(Calendar.MONTH) + 1;
+        int diafr = dtRETIRO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
+        String fch_retiro = añofr + "-" + mesfr + "-" + diafr;
+        String institucion = txtINSTITUACION.getText();
+        int cod_zona = cbxLABORES.getSelectedIndex();
+        int cod_ciudad = cbxCIUDAD.getItemCount();
+        int salario_basico = Integer.parseInt(txtBASICO.getText());
+        String cod_bancos = cbxBCUENTA.getSelectedItem().toString();
+        String tp_cta = cbxCUENTA.getSelectedItem().toString();
+        int num_cta = Integer.parseInt(txtNCUENTA.getText());
+        String periodo_pago = cbxPAGO.getSelectedItem().toString();
+        String cod_fon_salud = cbxSALUD.getSelectedItem().toString();
+        String cod_arl = cbxARL.getSelectedItem().toString();
+        int atep = Integer.parseInt(txtATEP.getText());
+        int tipo = cbxTCARGO.getSelectedIndex();
+        obCtrlbd.actualizar(id, tp_ctto, num_doc, fch_ingreso, fch_retiro, institucion, cod_zona, cod_ciudad, salario_basico, cod_bancos, tp_cta, num_cta, periodo_pago, cod_fon_salud, cod_arl, atep, tipo);
+    }
     
+        public int get_id() {
+        Ctrldatos_contrato obCtrlbd = new Ctrldatos_contrato();
+        int id = 0;
+        try {
+            ResultSet rs = obCtrlbd.getid(id);
+            while (rs.next()) {
+                id = rs.getInt(0);
+            }
+        } catch (Exception e) {
+            
+        }
+        return id;
+    }
     
+      void cargarDatos() {
+        Ctrldatos_contrato objctr = new Ctrldatos_contrato();
+        int codigo = get_id();
+        ResultSet datos = objctr.cargarDatos(codigo);
+        String tp_ctto="", num_doc="", fch_ingreso="", fch_retiro="", institucion="", cod_zona="", cod_ciudad="", salario_basico="", cod_bancos="", tp_cta="", num_cta="", periodo_pago="", cod_fon_salud="", cod_arl="", atep="", tipo="";
+    
+        try {
+            while (datos.next()) {
+                tp_ctto = datos.getString(1);
+                num_doc = datos.getString(2);
+                fch_ingreso = datos.getString(3);
+                fch_retiro = datos.getString(4);
+                institucion = datos.getString(5);
+                cod_zona = datos.getString(6);
+                cod_ciudad = datos.getString(7);
+                salario_basico = datos.getString(8);
+                cod_bancos = datos.getString(9);
+                tp_cta = datos.getString(10);
+                num_cta = datos.getString(11);
+                periodo_pago = datos.getString(12);
+                cod_fon_salud = datos.getString(13);
+                cod_arl = datos.getString(14);
+                atep = datos.getString(15);
+                tipo = datos.getString(16);
+            }
+        } catch (Exception e) {
+        }
+        cbxTCONTRATO.setSelectedItem(tp_ctto);
+        txtDOCUMENTO.setText(num_doc);
+        
+        txtINSTITUACION.setText(institucion);
+        cbxLABORES.setSelectedItem(cod_zona);
+        cbxCIUDAD.setSelectedItem(cod_ciudad);
+        txtBASICO.setText(salario_basico);
+        cbxBCUENTA.setSelectedItem(cod_bancos);
+        cbxCUENTA.setSelectedItem(tp_cta);
+        txtNCUENTA.setText(num_cta);
+        cbxPAGO.setSelectedItem(periodo_pago);
+        cbxSALUD.setSelectedItem(cod_fon_salud);
+        cbxARL.setSelectedItem(cod_arl);
+        txtATEP.setText(atep);
+        cbxTCARGO.setSelectedItem(tipo);
+    }
+      
+        void eliminar() {
+        Ctrldatos_contrato obCtrlbd = new Ctrldatos_contrato();
+        int id = get_id();
+        obCtrlbd.eliminar(id);
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NULL;
