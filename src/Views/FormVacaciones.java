@@ -17,8 +17,7 @@ public class FormVacaciones extends javax.swing.JFrame {
     public FormVacaciones() {
         initComponents();
         setLocationRelativeTo(null);
-        setTitle("INTERFACE-VACACIONES");
-        
+        setTitle("INTERFACE-VACACIONES");  
     }
 
     /**

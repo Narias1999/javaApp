@@ -48,6 +48,17 @@ public class BDdatos_contrato {
             System.out.println("Error BDdatos_contrato -- Actualizar " + e.getMessage());
         }
     }
+    
+    public void getid(int id1){
+         ResultSet datos = null;
+        try {
+            String sql = "Select id from datos_contrato";
+            Statement st = conexion.createStatement();
+            datos = st.executeQuery(sql);
+        } catch (Exception e) {
+            System.out.println("Error BDdatos_contrato-- Cargar datos " + e.getMessage());
+        }
+    }
 
     public void actualizar(int id, String tp_ctto, String num_doc, String fch_ing, String fch_retiro, String institucion, String nit, int cod_zona, int cod_ciudad, int salario_basico, String cod_bancos, String tp_cta, int num_cta, String periodo_pago, String cod_fon_salud, String cod_arl, int atep, int tipo) {
         try {
