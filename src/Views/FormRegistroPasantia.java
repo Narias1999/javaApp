@@ -66,7 +66,7 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         txtNCUENTA = new javax.swing.JTextField();
         txtNIT = new javax.swing.JTextField();
         cbxARL = new javax.swing.JComboBox();
-        cbxDOCUMENTO = new javax.swing.JComboBox();
+        cbxTIPODOCUMENTO = new javax.swing.JComboBox();
         cbxZONALABORES = new javax.swing.JComboBox();
         cbxTIPOCUENTA = new javax.swing.JComboBox();
         cbxPERIODOPAGO = new javax.swing.JComboBox();
@@ -79,8 +79,8 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         btGUARDAR = new javax.swing.JButton();
         btBUSCAR = new javax.swing.JButton();
         btMODIFICAR = new javax.swing.JButton();
-        datacRETIRO = new datechooser.beans.DateChooserCombo();
-        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
+        dtRETIRO = new datechooser.beans.DateChooserCombo();
+        dtINGRESO = new datechooser.beans.DateChooserCombo();
         jLabel1 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -184,13 +184,13 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         cbxARL.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE..." }));
         jPanel1.add(cbxARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 140, -1));
 
-        cbxDOCUMENTO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE...", "CEDULA CIUDADANIA", "TARJETA DE IDENTIDAD", "CEDULA EXTRANJERIA" }));
-        cbxDOCUMENTO.addActionListener(new java.awt.event.ActionListener() {
+        cbxTIPODOCUMENTO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE...", "CEDULA CIUDADANIA", "TARJETA DE IDENTIDAD", "CEDULA EXTRANJERIA" }));
+        cbxTIPODOCUMENTO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxDOCUMENTOActionPerformed(evt);
+                cbxTIPODOCUMENTOActionPerformed(evt);
             }
         });
-        jPanel1.add(cbxDOCUMENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 140, -1));
+        jPanel1.add(cbxTIPODOCUMENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 140, -1));
 
         cbxZONALABORES.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SELECCIONE..." }));
         jPanel1.add(cbxZONALABORES, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 140, -1));
@@ -225,8 +225,8 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
 
         btMODIFICAR.setText("MODIFICAR");
         jPanel1.add(btMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 130, -1));
-        jPanel1.add(datacRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 140, -1));
-        jPanel1.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 140, -1));
+        jPanel1.add(dtRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 140, -1));
+        jPanel1.add(dtINGRESO, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 140, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, -1, -1));
@@ -245,9 +245,9 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cbxDOCUMENTOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxDOCUMENTOActionPerformed
+    private void cbxTIPODOCUMENTOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTIPODOCUMENTOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbxDOCUMENTOActionPerformed
+    }//GEN-LAST:event_cbxTIPODOCUMENTOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,14 +292,14 @@ public class FormRegistroPasantia extends javax.swing.JFrame {
     private javax.swing.JComboBox cbxARL;
     private javax.swing.JComboBox cbxBANCOCUENTA;
     private javax.swing.JComboBox cbxCIUDAD;
-    private javax.swing.JComboBox cbxDOCUMENTO;
     private javax.swing.JComboBox cbxFONDOSALUD;
     private javax.swing.JComboBox cbxPERIODOPAGO;
     private javax.swing.JComboBox cbxTIPOCONTRATO;
     private javax.swing.JComboBox cbxTIPOCUENTA;
+    private javax.swing.JComboBox cbxTIPODOCUMENTO;
     private javax.swing.JComboBox cbxZONALABORES;
-    private datechooser.beans.DateChooserCombo datacRETIRO;
-    private datechooser.beans.DateChooserCombo dateChooserCombo2;
+    private datechooser.beans.DateChooserCombo dtINGRESO;
+    private datechooser.beans.DateChooserCombo dtRETIRO;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
