@@ -24,7 +24,7 @@ public class BDLocalidad {
         try {
 
             String sql = "select nom from zonas where cod_ciudad='"+idciudad+"'";
-            Statement st = Conexion.createStatement();
+            Statement st = conex.createStatement();
             datos = st.executeQuery(sql);
         } catch (Exception e) {
             System.out.println("Error cargarcbxdepartamento -- BDLocalidad" + e.getMessage());
@@ -38,7 +38,7 @@ public class BDLocalidad {
         try {
 
             String sql = "select cod from zonas where nom = '" + nom + "'";
-            Statement st = Conexion.createStatement();
+            Statement st = conex.createStatement();
            ResultSet data = st.executeQuery(sql);
            while(data.next()){
                id = data.getString("cod");
@@ -55,7 +55,7 @@ public class BDLocalidad {
         try {
 
             String sql = "select nom from ciudad where dpto='"+idDepartamento+"'";
-            Statement st = Conexion.createStatement();
+            Statement st = conex.createStatement();
             datos = st.executeQuery(sql);
         } catch (Exception e) {
             System.out.println("Error cargarcbxciudad -- BDLocalidad" + e.getMessage());
@@ -69,7 +69,7 @@ public class BDLocalidad {
         try {
 
             String sql = "select cod from ciudad where nom = '" + nom + "'";
-            Statement st = Conexion.createStatement();
+            Statement st = conex.createStatement();
             ResultSet data = st.executeQuery(sql);
             while(data.next()){
             id = data.getString("cod");
@@ -86,7 +86,7 @@ public class BDLocalidad {
         try {
 
             String sql = "select nom from dptos";
-            Statement st = Conexion.createStatement();
+            Statement st = conex.createStatement();
             datos = st.executeQuery(sql);
         } catch (Exception e) {
             System.out.println("Error cargarcbxdptos-- BDLocalidad" + e.getMessage());
@@ -100,7 +100,7 @@ public class BDLocalidad {
         try {
 
             String sql = "select cod from dptos where nom = '" + nom + "'";
-            Statement st = Conexion.createStatement();
+            Statement st = conex.createStatement();
             ResultSet data = st.executeQuery(sql);
             while (data.next()) {
                 id = data.getString("cod");

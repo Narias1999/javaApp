@@ -6,6 +6,7 @@
 package Views;
 
 import Controllers.CtrlCargarCbx;
+import Controllers.CtrlLocalidad;
 import Controllers.Ctrl_Datos_contrato;
 import java.sql.ResultSet;
 import java.util.Calendar;
@@ -103,16 +104,14 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         dtINGRESO = new datechooser.beans.DateChooserCombo();
         dtRETIRO = new datechooser.beans.DateChooserCombo();
         dtVENCIMIENTO2 = new datechooser.beans.DateChooserCombo();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         dateChooserCombo5 = new datechooser.beans.DateChooserCombo();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtppago = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cbxtpcuenta = new javax.swing.JComboBox<>();
+        cbxtpcontrato = new javax.swing.JComboBox<>();
+        lbLABORES1 = new javax.swing.JLabel();
+        cbxDepartamentos = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -133,49 +132,49 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         jPanel1.add(lbCONTRATO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 140, 20));
 
         lbPENSIONES.setText("FONDO DE PENSIONES");
-        jPanel1.add(lbPENSIONES, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 140, 20));
+        jPanel1.add(lbPENSIONES, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 140, 20));
 
         lbARL.setText("ARL");
-        jPanel1.add(lbARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 140, 20));
+        jPanel1.add(lbARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 140, 20));
 
         lbCOLOR.setText("COLOR");
-        jPanel1.add(lbCOLOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 140, 20));
+        jPanel1.add(lbCOLOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 140, 20));
 
         lbCURSOS.setText("LISTADO DE CURSOS");
-        jPanel1.add(lbCURSOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 140, 20));
+        jPanel1.add(lbCURSOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 140, 20));
 
         lbCERTIFICACION.setText("FECHA DE CERTIFICACION");
-        jPanel1.add(lbCERTIFICACION, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 140, 20));
+        jPanel1.add(lbCERTIFICACION, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 140, 20));
 
         lbLABORES.setText("ZONA DE LABORES");
-        jPanel1.add(lbLABORES, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 140, 20));
+        jPanel1.add(lbLABORES, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, 20));
 
         lbBASICO.setText("SALARIO BASICO");
-        jPanel1.add(lbBASICO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, 20));
+        jPanel1.add(lbBASICO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 140, 20));
 
         lbTRANSPORTE.setText("AUXILIO DE TRANSPORTE");
-        jPanel1.add(lbTRANSPORTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 140, 20));
+        jPanel1.add(lbTRANSPORTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 140, 20));
 
         lbCUENTA.setText("TIPO DE CUENTA");
-        jPanel1.add(lbCUENTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 140, 20));
+        jPanel1.add(lbCUENTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 140, 20));
 
         lbPAGO.setText("PERIODO DE PAGO");
-        jPanel1.add(lbPAGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 140, 20));
+        jPanel1.add(lbPAGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 140, 20));
 
         lbMOTO.setText("MOTOCICLETA");
-        jPanel1.add(lbMOTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 140, 20));
+        jPanel1.add(lbMOTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 140, 20));
 
         lbMARCA.setText("MARCA");
-        jPanel1.add(lbMARCA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 70, 20));
+        jPanel1.add(lbMARCA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 70, 20));
 
         lbASEGURADORA.setText("ASEGURADORA");
-        jPanel1.add(lbASEGURADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 140, 20));
+        jPanel1.add(lbASEGURADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 140, 20));
 
         lbCARGO.setText("CARGO");
         jPanel1.add(lbCARGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 140, 20));
         jPanel1.add(txtCONTRATO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 130, -1));
 
-        jPanel1.add(cbxMOTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 40, -1));
+        jPanel1.add(cbxMOTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 40, -1));
 
         jPanel1.add(cbxMODELO, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 80, -1));
 
@@ -183,24 +182,24 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
 
         txtBASICO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBASICO.setText("$");
-        jPanel1.add(txtBASICO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
+        jPanel1.add(txtBASICO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 130, -1));
 
         txtTRANSPORTE.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTRANSPORTE.setText("$");
-        jPanel1.add(txtTRANSPORTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 130, -1));
+        jPanel1.add(txtTRANSPORTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 130, -1));
 
-        jPanel1.add(cbxLABORES, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 130, -1));
+        jPanel1.add(cbxLABORES, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
 
-        jPanel1.add(cbxPENSIONES, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 130, -1));
+        jPanel1.add(cbxPENSIONES, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 130, -1));
 
-        jPanel1.add(cbxCURSOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 130, -1));
+        jPanel1.add(cbxCURSOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 130, -1));
 
         txtCOLOR.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(txtCOLOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 130, -1));
+        jPanel1.add(txtCOLOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 430, 130, -1));
 
-        jPanel1.add(cbxARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 130, -1));
+        jPanel1.add(cbxARL, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 130, -1));
 
-        jPanel1.add(cbxASEGURADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 430, 130, -1));
+        jPanel1.add(cbxASEGURADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 130, -1));
 
         lbTCONTRATO.setText("TIPO DE CONTRATO");
         jPanel1.add(lbTCONTRATO, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 140, 20));
@@ -210,7 +209,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         jPanel1.add(lbMODELO, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 70, 20));
 
         lbCIUDAD.setText("CIUDAD");
-        jPanel1.add(lbCIUDAD, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 140, 20));
+        jPanel1.add(lbCIUDAD, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 140, 20));
 
         lbNDOCUMENTO.setText("# DE DOCUMENTO");
         jPanel1.add(lbNDOCUMENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 140, 20));
@@ -238,23 +237,23 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         jPanel1.add(cbxBCUENTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 130, -1));
 
         jPanel1.add(cbxSALUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 130, -1));
-        jPanel1.add(txtINSTITUACION, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, 220, -1));
+        jPanel1.add(txtINSTITUACION, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 130, 20));
         jPanel1.add(txtDOCUMENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, 130, -1));
         jPanel1.add(txtMOVILIDAD, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 130, -1));
 
-        jPanel1.add(cbxCIUDAD, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 130, -1));
+        jPanel1.add(cbxCIUDAD, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 130, -1));
         jPanel1.add(txtNCUENTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 130, -1));
 
         txtPLACAS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtPLACAS.setText("PLACAS");
-        jPanel1.add(txtPLACAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 80, -1));
+        jPanel1.add(txtPLACAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 80, -1));
 
         txtNPLACAS.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtNPLACAS.setText("# PLACAS");
         jPanel1.add(txtNPLACAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 80, -1));
 
         lbRETIRO.setText("FECHA DE RETIRO");
-        jPanel1.add(lbRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 140, 20));
+        jPanel1.add(lbRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 140, 20));
 
         jPanel1.add(cbxSOAT, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 430, 130, -1));
 
@@ -269,7 +268,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         jPanel1.add(lbSOAT, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 140, 20));
 
         lbVENCIMIENTO.setText("FECHA DE VENCIMIENTO");
-        jPanel1.add(lbVENCIMIENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 140, 20));
+        jPanel1.add(lbVENCIMIENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, 140, 20));
         jPanel1.add(txtCILINDRAJE, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 130, -1));
 
         jPanel1.add(cbxCOMPENSACION, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 130, -1));
@@ -278,7 +277,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         jPanel1.add(lbVENCIMIENTO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 140, 20));
 
         btELIMINAR.setText("ELIMINAR");
-        jPanel1.add(btELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 610, -1, -1));
+        jPanel1.add(btELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 620, -1, -1));
 
         btMODIFICAR.setText("GUARDAR");
         btMODIFICAR.addActionListener(new java.awt.event.ActionListener() {
@@ -286,45 +285,38 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
                 btMODIFICARActionPerformed(evt);
             }
         });
-        jPanel1.add(btMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
+        jPanel1.add(btMODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 620, -1, -1));
 
         btBUSCAR.setText("BUSCAR");
-        jPanel1.add(btBUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 610, -1, -1));
+        jPanel1.add(btBUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 620, -1, -1));
 
         btGUARDAR.setText("MODIFICAR");
-        jPanel1.add(btGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, -1, -1));
-        jPanel1.add(dtVENCIMIENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 130, -1));
+        jPanel1.add(btGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 620, -1, -1));
+        jPanel1.add(dtVENCIMIENTO, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 520, 130, -1));
         jPanel1.add(dtINGRESO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 130, -1));
-        jPanel1.add(dtRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 130, -1));
+        jPanel1.add(dtRETIRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 130, -1));
         jPanel1.add(dtVENCIMIENTO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 130, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/save.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, 32, 32));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 560, 32, 32));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 560, 32, 32));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 560, 32, 32));
-        jPanel1.add(dateChooserCombo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 130, -1));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 130, 20));
+        jPanel1.add(dateChooserCombo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, 130, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 130, 20));
 
         jLabel6.setText("INSTITUCION");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 80, 20));
 
         txtppago.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(txtppago, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 130, -1));
+        jPanel1.add(txtppago, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 130, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ahorro", "Corriente", " " }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 130, -1));
+        cbxtpcuenta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione el tipo de cuenta", "Ahorro", "Corriente", " " }));
+        jPanel1.add(cbxtpcuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 130, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tecnologo", "Tecnico", "Pasantia", "Profecional", "Aprendiz", "Auxiliar" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 130, -1));
+        cbxtpcontrato.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione el tipo de contrato", "Tecnologo", "Tecnico", "Pasantia", "Profecional", "Aprendiz", "Auxiliar" }));
+        jPanel1.add(cbxtpcontrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 130, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 660, 640));
+        lbLABORES1.setText("DEPARTAMENTO");
+        jPanel1.add(lbLABORES1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 110, 20));
+
+        jPanel1.add(cbxDepartamentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 130, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 660, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -370,6 +362,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
 
     void cargarCBX() {
         CtrlCargarCbx ctrl = new CtrlCargarCbx();
+        CtrlLocalidad ctrl2 = new CtrlLocalidad();
         ResultSet data = null;
         data = ctrl.cargarCBX_FondoSalud();
         try {
@@ -396,10 +389,42 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
             while (data.next()) {
                 cbxPENSIONES.addItem(data.getString("nom"));
             }
-            data = ctrl.cargarCB();
+            data = ctrl.cargarCBX_fondop();
             while (data.next()) {
                 cbxPENSIONES.addItem(data.getString("nom"));
             }
+            data = ctrl2.cargardptos();
+            while (data.next()) {
+                cbxDepartamentos.addItem(data.getString("nom"));
+            }
+        } catch (Exception e) {
+        }
+    }
+void cargarLocalidad() {
+        CtrlLocalidad ctrl = new CtrlLocalidad();
+        ResultSet data = null;
+        String id = ctrl.getId_ciudad(cbxCIUDAD.getSelectedItem().toString());
+        data = ctrl.cargarcbxZonas(id);
+        try {
+            while (data.next()) {
+                cbxLABORES.removeAllItems();
+                cbxLABORES.addItem(data.getString("nom"));
+            }
+            
+        } catch (Exception e) {
+        }
+    }
+    void cargarCiudades() {
+        CtrlLocalidad ctrl = new CtrlLocalidad();
+        ResultSet data = null;
+        String id = ctrl.getId_dptos(cbxDepartamentos.getSelectedItem().toString());
+        data = ctrl.cargarcbxciudad(id);
+        try {
+            while (data.next()) {
+                cbxCIUDAD.removeAllItems();
+                cbxCIUDAD.addItem(data.getString("nom"));
+            }
+            
         } catch (Exception e) {
         }
     }
@@ -415,15 +440,15 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         int meses = dtINGRESO.getSelectedDate().get(Calendar.MONTH) + 1;
         int dias = dtINGRESO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
         String fch_retiro = años + "-" + meses + "-" + dias;
-        String tp_contrato = txttpctto.getText();
+        String tp_contrato = cbxtpcontrato.getSelectedItem().toString();
         String n_documento = txtDOCUMENTO.getText();
         String institucion = txtINSTITUACION.getText();
         String salario_basico = txtBASICO.getText();
-        String tp_cuenta = txttpcuenta.getText();
+        String tp_cuenta = cbxtpcuenta.getSelectedItem().toString();
         String num_cta = txtNCUENTA.getText();
-        String p_pago = txtppago.getText();
+//        String p_pago = txtppago.getText();
         String atep = txtATEP.getText();
-        obCtrl.guardar(num_cta, num_doc, fch_ing, fch_retiro, institucion, atep, dia, dias, dias, num_cta, num_cta, meses, salario_basico, num_cta, num_cta, años, dias);
+//        obCtrl.guardar(num_cta, num_doc, fch_ing, fch_retiro, institucion, atep, dia, dias, dias, num_cta, num_cta, meses, salario_basico, num_cta, num_cta, años, dias);
     }
 
     void actualizar() {
@@ -437,15 +462,15 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         int meses = dtRETIRO.getSelectedDate().get(Calendar.MONTH) + 1;
         int dias = dtRETIRO.getSelectedDate().get(Calendar.DAY_OF_MONTH);
         String fch_retiro = años + "-" + meses + "-" + dias;
-        String tp_contrato = txttpctto.getText();
+        String tp_contrato = cbxtpcontrato.getSelectedItem().toString();
         String n_documento = txtDOCUMENTO.getText();
         String institucion = txtINSTITUACION.getText();
         String salario_basico = txtBASICO.getText();
-        String tp_cuenta = txttpcuenta.getText();
+//        String tp_cuenta = txttpcuenta.getText();
         String num_cta = txtNCUENTA.getText();
         String p_pago = txtppago.getText();
         String atep = txtATEP.getText();
-        obCtrl.actualizar(num_cta, num_doc, fch_ing, fch_retiro, institucion, atep, dia, dias, dias, num_cta, num_cta, meses, salario_basico, num_cta, num_cta, años, dias);
+//        obCtrl.actualizar(num_cta, num_doc, fch_ing, fch_retiro, institucion, atep, dia, dias, dias, num_cta, num_cta, meses, salario_basico, num_cta, num_cta, años, dias);
     }
 
     public void Eliminar() {
@@ -479,11 +504,11 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
         }
         dtINGRESO.setText(fch_ing);
         dtRETIRO.setText(fch_retiro);
-        txttpctto.setText(tp_contrato);
+//        txttpctto.setText(tp_contrato);
         txtDOCUMENTO.setText(n_documento);
         txtINSTITUACION.setText(institucion);
         txtBASICO.setText(salario_basico);
-        txttpcuenta.setText(tp_cuenta);
+//        txttpcuenta.setText(tp_cuenta);
         txtNCUENTA.setText(num_cta);
         txtppago.setText(p_pago);
         txtATEP.setText(atep);
@@ -502,6 +527,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
     private javax.swing.JComboBox cbxCIUDAD;
     private javax.swing.JComboBox cbxCOMPENSACION;
     private javax.swing.JComboBox cbxCURSOS;
+    private javax.swing.JComboBox cbxDepartamentos;
     private javax.swing.JComboBox cbxLABORES;
     private javax.swing.JComboBox cbxMODELO;
     private javax.swing.JComboBox cbxMOTO;
@@ -509,17 +535,13 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
     private javax.swing.JComboBox cbxSALUD;
     private javax.swing.JComboBox cbxSOAT;
     private javax.swing.JComboBox cbxTCARGO;
+    private javax.swing.JComboBox<String> cbxtpcontrato;
+    private javax.swing.JComboBox<String> cbxtpcuenta;
     private datechooser.beans.DateChooserCombo dateChooserCombo5;
     private datechooser.beans.DateChooserCombo dtINGRESO;
     private datechooser.beans.DateChooserCombo dtRETIRO;
     private datechooser.beans.DateChooserCombo dtVENCIMIENTO;
     private datechooser.beans.DateChooserCombo dtVENCIMIENTO2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
@@ -539,6 +561,7 @@ public class FormContratoEmpleados extends javax.swing.JFrame {
     private javax.swing.JLabel lbCURSOS;
     private javax.swing.JLabel lbINGRESO;
     private javax.swing.JLabel lbLABORES;
+    private javax.swing.JLabel lbLABORES1;
     private javax.swing.JLabel lbMARCA;
     private javax.swing.JLabel lbMODELO;
     private javax.swing.JLabel lbMOTO;
