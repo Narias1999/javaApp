@@ -5,6 +5,8 @@
  */
 package Views;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author USUARIO
@@ -16,6 +18,7 @@ public class From_seleccionregistro extends javax.swing.JFrame {
      */
     public From_seleccionregistro() {
         initComponents();
+         setLocationRelativeTo(null);
     }
 
     /**
@@ -31,8 +34,14 @@ public class From_seleccionregistro extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btREGEMPLEADOS = new javax.swing.JButton();
         btREGCONTRATISTA = new javax.swing.JButton();
+        btPERMISOS = new javax.swing.JButton();
+        btCONTRATOS = new javax.swing.JButton();
+        btVACACIONES = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -46,21 +55,79 @@ public class From_seleccionregistro extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 100, 20));
 
         btREGEMPLEADOS.setText("REGISTRO EMPLEADOS");
+        btREGEMPLEADOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btREGEMPLEADOSActionPerformed(evt);
+            }
+        });
         jPanel1.add(btREGEMPLEADOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         btREGCONTRATISTA.setText("REGISTRO CONTRATISTA");
         jPanel1.add(btREGCONTRATISTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add-user (1).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 50, 50));
+        btPERMISOS.setText("PERMISOS");
+        btPERMISOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPERMISOSActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btPERMISOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 150, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add-user (1).png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 50, 50));
+        btCONTRATOS.setText("CONTRATOS");
+        btCONTRATOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCONTRATOSActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btCONTRATOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 160, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 240));
+        btVACACIONES.setText("VACACIONES");
+        btVACACIONES.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVACACIONESActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btVACACIONES, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 150, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/contract.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 50, 50));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sunbed.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 50, 50));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add-user (1).png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 50, 50));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add-user (1).png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 50, 50));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clipboard.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 50, 50));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btREGEMPLEADOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btREGEMPLEADOSActionPerformed
+        FormRegistro form = new FormRegistro();
+        showForm(form);
+    }//GEN-LAST:event_btREGEMPLEADOSActionPerformed
+
+    private void btCONTRATOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCONTRATOSActionPerformed
+        FormTodoscotratos form = new FormTodoscotratos();
+        showForm(form);
+    }//GEN-LAST:event_btCONTRATOSActionPerformed
+
+    private void btPERMISOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPERMISOSActionPerformed
+        FormPermisos form = new FormPermisos();
+        showForm(form);
+    }//GEN-LAST:event_btPERMISOSActionPerformed
+
+    private void btVACACIONESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVACACIONESActionPerformed
+       FormVacaciones form = new FormVacaciones();
+        showForm(form);
+    }//GEN-LAST:event_btVACACIONESActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,17 +164,25 @@ public class From_seleccionregistro extends javax.swing.JFrame {
             }
         });
     }
+    void showForm(JFrame form){
+        this.dispose();
+        form.setVisible(true);
+        form.setLocationRelativeTo(null);
+    }
     
     
-    
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btCONTRATOS;
+    private javax.swing.JButton btPERMISOS;
     private javax.swing.JButton btREGCONTRATISTA;
     private javax.swing.JButton btREGEMPLEADOS;
+    private javax.swing.JButton btVACACIONES;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

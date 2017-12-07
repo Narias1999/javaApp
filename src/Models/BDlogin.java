@@ -13,7 +13,7 @@ import java.sql.Statement;
  *
  * @author USUARIO
  */
-public class login {
+public class BDlogin {
     Conexion Objcnx = new Conexion();
     Connection conexion = Objcnx.getCempBD();
     
@@ -29,12 +29,23 @@ public class login {
             }
             
         } catch (Exception e) {
-            System.out.println("Login BD"+e.getMessage());
+            System.out.println("error en BDlogin"+e.getMessage());
         }
         
     }
 
     public int getCountUsu() {
         return CountUsu;
+    }
+    public ResultSet loadcombobox() {
+        ResultSet datos = null;
+        try {
+            String sql = "Select usuario from usuarios";
+            Statement st = conexion.createStatement();
+            datos = st.executeQuery(sql);
+        } catch (Exception e) {
+            System.out.println("Error BD_t_login -- loadcbx1 " + e.getMessage());
+        }
+        return datos;
     }
 }
