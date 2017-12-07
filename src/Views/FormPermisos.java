@@ -5,6 +5,12 @@
  */
 package Views;
 
+import Controllers.CtrlPermisosVacaciones;
+import datechooser.beans.DateChooserCombo;
+import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  *
  * @author BAUTISTA TTRIANA
@@ -42,7 +48,7 @@ public class FormPermisos extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txttipdoc = new javax.swing.JTextField();
+        txtid = new javax.swing.JTextField();
         txtnumdoc = new javax.swing.JTextField();
         txtdireem = new javax.swing.JTextField();
         txtcorrem = new javax.swing.JTextField();
@@ -94,7 +100,7 @@ public class FormPermisos extends javax.swing.JFrame {
         jPanel1.add(txtcelem, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 170, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("TIPO DE DOCUMENTO");
+        jLabel7.setText("ID");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -113,8 +119,8 @@ public class FormPermisos extends javax.swing.JFrame {
         jLabel11.setText("HORA/FECHA DESDE");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
-        txttipdoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txttipdoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 170, -1));
+        txtid.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 170, -1));
 
         txtnumdoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txtnumdoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 170, -1));
@@ -286,7 +292,66 @@ pack();
             }
         });
     }
-
+void guardar(){
+    CtrlPermisosVacaciones objCtrl = new CtrlPermisosVacaciones();
+        int id =Integer.parseInt(txtid.getText());
+        String dateDesde = getDate(dtfechadesde);
+        String datehasta = getDate(dtfechahasta);
+        int numdocu = Integer.parseInt(txtnumdoc.getText());
+        String detped= txtdetpermi.getText();
+        objCtrl.actualizar(dateDesde, detped, datehasta, id, numdocu, "2");
+}
+String getDate(DateChooserCombo dateChooser){
+    SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+    Calendar dateS = dateChooser.getSelectedDate();
+    String date = format1.format(dateS.getTime());
+    return date;
+}
+void actualizar(){
+     CtrlPermisosVacaciones objCtrl = new CtrlPermisosVacaciones();
+        String id = txtid.getText();
+        String dateDesde = getDate(dtfechadesde);
+        String datehasta = getDate(dtfechadesde);
+        int numdocu = Integer.parseInt(txtnumdoc.getText());
+        String detper= txtdetpermi.getText();
+        objCtrl.actualizar(dateDesde, detper, datehasta, id, numdocu, "2");
+}
+void cargarDatos() {
+        CtrlPermisosVacaciones objctrl = new CtrlPermisosVacaciones();
+       int id = Integer.parseInt(txtid.getText());
+        ResultSet datos = objctrl.cargarDatosEmpleado(id);
+        String numdocu="",  tipodoc="", nombreem="", celemp="", dateDesde="", datehasta="", direcemp="",  correoem="", detped="";
+    
+        try {
+            while (datos.next()) {
+                
+                numdocu= datos.getString(1);
+                nombreem = datos.getString(2);
+                celemp = datos.getString(3);
+                dateDesde = datos.getString(4);
+                datehasta = datos.getString(5);
+                direcemp = datos.getString(6);
+                correoem = datos.getString(7);
+                detped = datos.getString(8);
+                
+            }
+        } catch (Exception e) {
+        }
+        txtnumdoc.setText(numdocu);
+        txtnomem.setText(nombreem);
+        txtcelem.setText(celemp);
+        dtfechadesde.setText(dateDesde);
+        dtfechahasta.setText(datehasta);
+        txtdireem.setText(direcemp);
+        txtcorrem.setText(correoem);
+        txtdetpermi.setText(detped);
+        
+    }
+        void eliminar() {
+        CtrlPermisosVacaciones objctrl = new CtrlPermisosVacaciones();
+        int id = Integer.parseInt(txtid.getText());
+        objctrl.eliminar(id);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btbuscar;
     private javax.swing.JButton bteliminar;
@@ -315,8 +380,8 @@ pack();
     private javax.swing.JTextField txtcorrem;
     private javax.swing.JTextArea txtdetpermi;
     private javax.swing.JTextField txtdireem;
+    private javax.swing.JTextField txtid;
     private javax.swing.JTextField txtnomem;
     private javax.swing.JTextField txtnumdoc;
-    private javax.swing.JTextField txttipdoc;
     // End of variables declaration//GEN-END:variables
 }
