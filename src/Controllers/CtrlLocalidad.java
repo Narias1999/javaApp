@@ -24,7 +24,7 @@ public class CtrlLocalidad {
          BDLocalidad obj = new BDLocalidad();
           return obj.getId_Zonas(nom);
      }
-     
+      
       public ResultSet cargarcbxciudad(String idDepartamento) {
          BDLocalidad obj = new BDLocalidad();
          ResultSet datos = obj.cargarcbxciudad(idDepartamento);
