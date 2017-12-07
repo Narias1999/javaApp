@@ -21,13 +21,10 @@ public class FormLogin extends javax.swing.JFrame {
     public FormLogin() {
         
         initComponents();
-<<<<<<< HEAD
         setTitle("LOGIN");
         llenarcbox();
-=======
         setLocationRelativeTo(null);
         setTitle("LOGIN");
->>>>>>> 3026fa5016b3635db80b63b9120bcf9c53736e5b
     }
 
     /**
@@ -149,7 +146,7 @@ validar();
         Ctrllogin obj = new Ctrllogin();
         int estado = obj.validar();
         if (estado == 1) {
-            JOptionPane.showMessageDialog(null, "bienvenido  Usuario y contraseña correctos");
+            JOptionPane.showMessageDialog(null, "Bienvenido  Usuario y contraseña correctos");
         } else {
             JOptionPane.showMessageDialog(null, "Usuario y contraseña son incorrectos");
         }
