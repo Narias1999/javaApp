@@ -6,6 +6,7 @@
 package Views;
 
 import Controllers.Ctrllogin;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,8 +21,13 @@ public class FormLogin extends javax.swing.JFrame {
     public FormLogin() {
         
         initComponents();
+<<<<<<< HEAD
+        setTitle("LOGIN");
+        llenarcbox();
+=======
         setLocationRelativeTo(null);
         setTitle("LOGIN");
+>>>>>>> 3026fa5016b3635db80b63b9120bcf9c53736e5b
     }
 
     /**
@@ -148,6 +154,17 @@ validar();
             JOptionPane.showMessageDialog(null, "Usuario y contraseña son incorrectos");
         }
 
+    }
+    void llenarcbox() {
+        Ctrllogin  obj= new Ctrllogin();
+        ResultSet rs = obj.getcombobox();
+        try {
+            while (rs.next()) {
+                cbUSUARIOS.addItem(rs.getString(1));
+            }
+        } catch (Exception e) {
+            
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

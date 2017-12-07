@@ -36,4 +36,11 @@ public class Ctrldatos_contrato {
         datos = obje.cargarDatos(id);
         return datos;
     }
+    
+    public ResultSet getid(int id1){
+           ResultSet datos;
+        BDdatos_contrato obje = new BDdatos_contrato();
+        datos = obje.cargarDatos(id1);
+        return datos;
+    }
 }
