@@ -5,6 +5,11 @@
  */
 package Views;
 
+import Controllers.CtrlPermisosVacaciones;
+import datechooser.beans.DateChooserCombo;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  *
  * @author BAUTISTA TTRIANA
@@ -131,6 +136,11 @@ public class FormVacaciones extends javax.swing.JFrame {
 
         btguar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btguar.setText("GUARDAR");
+        btguar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btguarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btguar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 110, -1));
 
         btbusc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -146,7 +156,7 @@ public class FormVacaciones extends javax.swing.JFrame {
         txtobs.setRows(5);
         jScrollPane1.setViewportView(txtobs);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 550, 80));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 510, 80));
 
         dtfecdesde.setCurrentView(new datechooser.view.appearance.AppearancesList("Light",
             new datechooser.view.appearance.ViewAppearance("custom",
@@ -251,6 +261,12 @@ getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(
 pack();
 }// </editor-fold>//GEN-END:initComponents
 
+    private void btguarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btguarActionPerformed
+        guardar();
+        getDate(dtfechasta);
+        getDate(dtfecdesde);
+    }//GEN-LAST:event_btguarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -285,6 +301,25 @@ pack();
             }
         });
     }
+void guardar(){
+    CtrlPermisosVacaciones objCtrl = new CtrlPermisosVacaciones();
+        String tipodoc = txttpd.getText();
+        String nombreem = txtnombremp.getText();
+        String celemp = txtcelemple.getText();
+        String dateDesde = getDate(dtfecdesde);
+        String datehasta = getDate(dtfechasta);
+        int numdocu = Integer.parseInt(txtnumdocu.getText());
+        String direcemp = txtdirecempl.getText();
+        String correoem = txtcorreoem.getText();
+        String observa= txtobs.getText();
+        objCtrl.guardar(dateDesde, celemp, datehasta, tipodoc, tipodoc, numdocu);
+}
+String getDate(DateChooserCombo dateChooser){
+    SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+    Calendar dateS = dateChooser.getSelectedDate();
+    String date = format1.format(dateS.getTime());
+    return date;
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btbusc;
